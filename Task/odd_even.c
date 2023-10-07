@@ -1,3 +1,4 @@
+// WAP program to get a number from the user and print number is even or odd
 #include <stdio.h>
 void main()
 {
