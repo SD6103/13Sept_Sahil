@@ -6,16 +6,16 @@ void main()
 
     printf("\n1. Super Hero \n2. Thriller \n3. Action \n4. Sci-Fi \n5. Romance\n");
     printf("Select2 Genre which you like: ");
-    scanf("%d", &genre);
+    scanf("%d", &genre); // get choice of user
 
-    switch (genre)
+    switch (genre) // outter switch
     {
     case 1:
         printf("\n1. Spider-Man \n2. Batman v Superman \n3. Dr. Strange \n4. Avengers Endgame \n5. X-Men\n");
         printf("Select Your Choice: ");
-        scanf("%d", &movie);
+        scanf("%d", &movie); // get choice of user
 
-        switch (movie)
+        switch (movie) // inner switch
         {
         case 1:
             printf("\nSpider-Man will start soon... Enjoy...");
