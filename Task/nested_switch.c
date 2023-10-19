@@ -5,7 +5,7 @@ void main()
     int genre, movie;
 
     printf("\n1. Super Hero \n2. Thriller \n3. Action \n4. Sci-Fi \n5. Romance\n");
-    printf("Select2 Genre which you like: ");
+    printf("Select Genre which you like: ");
     scanf("%d", &genre); // get choice of user
 
     switch (genre) // outter switch
@@ -41,7 +41,7 @@ void main()
     case 2:
         printf("\n1. Interstaller \n2. Fight Club \n3. The Shawshank Redemption \n4. Inception \n5. Shutter Island\n");
         printf("Select Your Choice: ");
-        scanf("%d", movie);
+        scanf("%d", &movie);
 
         switch (movie)
         {
