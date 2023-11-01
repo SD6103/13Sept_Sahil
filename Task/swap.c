@@ -8,11 +8,11 @@ void main()
     printf("Enter value of b: ");
     scanf("%d", &b); // get value
 
-    printf("Before swap: \nValue of a is: %d \nVAlue of b is: %d", a, b); // before swap
+    printf("\nBefore swap: \nValue of a is: %d \nVAlue of b is: %d", a, b); // before swap
 
     a = a + b; // 50 = 20+30
     b = a - b; // 20 = 50-30
     a = a - b; // 30 = 50-20
 
-    printf("\nAfter swap: \nValue of a is: %d \nValue of b is: %d", a, b); // after swap
+    printf("\n\nAfter swap: \nValue of a is: %d \nValue of b is: %d", a, b); // after swap
 }

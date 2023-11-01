@@ -1,10 +1,10 @@
-// WAP program to get age from the user and print previous and next year age
+// WAP to get current age and print previous and next age
 #include <stdio.h>
 void main()
 {
-    int cur_age, prev_age, next_age; //variables
+    int cur_age, prev_age, next_age;
     printf("Enter Your Current Age: ");
-    scanf("%d", &cur_age); // get value from user
+    scanf("%d", &cur_age);
 
     prev_age = --cur_age; // prev = 20 - 1 = 20
     next_age = ++cur_age; // next_age = 20 + 1 = 20

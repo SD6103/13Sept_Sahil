@@ -1,11 +1,10 @@
-// WAP program to get a number from the user and print number is even or odd
 #include <stdio.h>
 void main()
 {
-    int num; // variables
+    int num;
     printf("enter a number : ");
-    scanf("%d", &num); // get value from user
-    if (num % 2 == 0) // condition
+    scanf("%d", &num);
+    if (num % 2 == 0)
     {
         printf("even");
     }
@@ -13,4 +12,18 @@ void main()
     {
         printf("odd");
     }
+
+    // if user enters zero
+    // if (num == 0)
+    // {
+    //     printf("zero");
+    // }
+    // else if (num % 2 == 0)
+    // {
+    //     printf("even");
+    // }
+    // else
+    // {
+    //     printf("odd");
+    // }
 }

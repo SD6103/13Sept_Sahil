@@ -2,11 +2,11 @@
 #include <stdio.h>
 void main()
 {
-    char alpha; // variable
+    char alpha;
     printf("Enter a Alphabet:");
-    scanf("%c", &alpha); // get alphabet
+    scanf("%c", &alpha);
 
-    switch (alpha) // swtich case
+    switch (alpha)
     {
     case 'a':
     case 'e':
