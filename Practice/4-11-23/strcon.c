@@ -1,4 +1,5 @@
-// WAP to concate two strings withour using inbuild function
+// // WAP to concate two strings withour using inbuild function
+
 #include <stdio.h>
 void main()
 {
