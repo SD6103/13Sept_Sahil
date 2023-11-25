@@ -9,10 +9,10 @@
 #include <stdio.h>
 void main()
 {
-    int i, j;
-    for (i = 1; i <= 5; i++)
+    int i, j;                // variables
+    for (i = 1; i <= 5; i++) // outer loop
     {
-        for (j = 1; j <= i; j++)
+        for (j = 1; j <= i; j++) // inner loop
         {
             if (j % 2 == 0)
             {

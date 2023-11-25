@@ -2,15 +2,15 @@
 #include <stdio.h>
 void main()
 {
-    int no, i, j;
+    int no, i, j; // variable
     printf("Enter a number: ");
-    scanf("%d", &no);
+    scanf("%d", &no); // get value
 
-    for (i = 1; i <= no; i++)
+    for (i = 1; i <= no; i++) // for loop
     {
         printf("Table of %d: \n", i);
         printf("-----------\n");
-        for (j = 1; j <= 10; j++)
+        for (j = 1; j <= 10; j++) // for loop
         {
             printf("%d * %d = %d", i, j, i * j);
             printf("\n");

@@ -3,11 +3,11 @@
 #include <stdio.h>
 void main()
 {
-    int n, i, sum = 0, m;
+    int n, i, sum = 0, m; // vaariable
     printf("Enter a Value : ");
-    scanf("%d", &n);
+    scanf("%d", &n); // get value
 
-    for (i = n; i > 0; i = i / 10)
+    for (i = n; i > 0; i = i / 10) // for loop
     {
         m = i % 10;
         sum = sum + m;

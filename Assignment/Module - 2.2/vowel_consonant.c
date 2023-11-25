@@ -2,11 +2,11 @@
 #include <stdio.h>
 void main()
 {
-    char alpha;
+    char alpha; // variable
     printf("Enter a Alphabet:");
-    scanf("%c", &alpha);
+    scanf("%c", &alpha); // get value
 
-    switch (alpha)
+    switch (alpha) // switch case
     {
     case 'a':
     case 'e':

@@ -3,12 +3,17 @@
 #include <stdio.h>
 void main()
 {
-    int val, i;
-    printf("Enter a value : ");
-    scanf("%d", &val);
+    int n, i, max = 0, a; // variable
+    printf("Enter No : ");
+    scanf("%d", &n); // get value
 
-    for (i = 0; i <= val; i++)
+    for (i = n; i > 0; i /= 10) // for loop
     {
-        int max = val % 10;
+        a = i % 10;
+        if (a > max)
+        {
+            max = a;
+        }
     }
+    printf("%d", max);
 }

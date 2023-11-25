@@ -9,11 +9,11 @@ K L M N O
 #include <stdio.h>
 void main()
 {
-    int i, j;
-    char k = 65;
-    for (i = 1; i <= 5; i++)
+    int i, j;                // variables
+    char k = 65;             // variable
+    for (i = 1; i <= 5; i++) // outter loop
     {
-        for (j = 1; j <= i; j++)
+        for (j = 1; j <= i; j++) // inner loop
         {
             printf("%c ", k);
             k++;

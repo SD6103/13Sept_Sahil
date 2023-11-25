@@ -3,13 +3,13 @@
 #include <stdio.h>
 void main()
 {
-    int n1, n2, choice;
+    int n1, n2, choice; // variable
 
     printf("1. Addition \n2. Subtraction \n3. Multiplication \n4. Division\n");
     printf("Enter What you want to do : ");
-    scanf("%d", &choice);
+    scanf("%d", &choice); // getting choice from user
 
-    switch (choice)
+    switch (choice) // switch case
     {
     case 1:
         printf("Enter number 1 : ");

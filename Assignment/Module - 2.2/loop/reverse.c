@@ -2,9 +2,9 @@
 #include <stdio.h>
 void main()
 {
-    int i, n, a, rev = 0;
+    int i, n, a, rev = 0; // variable
     printf("Enter a value: ");
-    scanf("%d", &n);
+    scanf("%d", &n); // get value
 
     for (i = n; i != 0; i /= 10) // 586 5!=0
     {
