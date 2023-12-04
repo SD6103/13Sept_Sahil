@@ -4,21 +4,23 @@
 
 struct example // creating structure
 {
-    int a;             // data member
-    char b;            // data member
-    char str_name[20]; // data member
-    double c;          // data member
-    float d;           // data member
-} e;                   // object of structure
+    // data members
+    int a;
+    char b;
+    char str_name[20];
+    double c;
+    float d;
+} e; // object of structure
 
 union example1 // creating union
 {
-    int a;             // data member
-    char b;            // data member
-    char str_name[20]; // data member
-    double c;          // data member
-    float d;           // data member
-} ex;                  // object of union
+    // data members
+    int a;
+    char b;
+    char str_name[20];
+    double c;
+    float d;
+} ex; // object for union
 
 int main()
 {

@@ -3,15 +3,26 @@
 #include <stdio.h>
 #include <string.h>
 
-int rev_str(int str[20]) // creating function
+char str[20];
+int len;
+
+void rev_Str(char str[20])
 {
-    return strlen(str);
+
+    if (str != '\0')
+    {
+    }
+    else
+    {
+        // rev_Str();
+    }
 }
 
-void main() // main function
+void main()
 {
-    int str[20];
-    printf("Enter A String : ");
+    printf("Enter a string : ");
     scanf("%s", &str);
-    printf("Length : %d", rev_str(str)); // function calling
+
+    len = strlen(str);
+    rev_Str(str);
 }

@@ -3,12 +3,14 @@
 #include <stdio.h>
 struct employee
 {
+    // data members of sturcture (variables)
     int emp_no, age;
     char emp_nm[20], add[100];
-} emp;
+} emp; // object of structure
 
 void main()
 {
+    // get employee's number, name, address, age
     printf("Enter Employee Number : ");
     scanf("%d", &emp.emp_no);
     printf("Enter Employee Name : ");
@@ -18,6 +20,7 @@ void main()
     printf("Enter Age : ");
     scanf("%d", &emp.age);
 
+    // print employee's number, name, address, age
     printf("Employee Number : %d\n", emp.emp_no);
     printf("Employee Name : %s\n", emp.emp_nm);
     printf("Address : %s\n", emp.add);
