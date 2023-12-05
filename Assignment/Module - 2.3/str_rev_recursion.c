@@ -3,26 +3,24 @@
 #include <stdio.h>
 #include <string.h>
 
-char str[20];
-int len;
-
-void rev_Str(char str[20])
+// creating a function
+char rev_Str(char str[20], int len)
 {
-
-    if (str != '\0')
+    // condition
+    if (str[len] == '\0')
     {
+        return ' ';
     }
     else
     {
-        // rev_Str();
+        printf("%c", str[len]);
+        rev_Str("string", len - 1); // function calling (recursion)
     }
 }
 
 void main()
 {
-    printf("Enter a string : ");
-    scanf("%s", &str);
-
-    len = strlen(str);
-    rev_Str(str);
+    char str[20] = {"string"}; // create string
+    int len = strlen(str);     // get string length
+    rev_Str(str, len - 1);     // function calling
 }
