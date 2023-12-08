@@ -1,48 +1,106 @@
+// WAP to create calculator using hierarchical inheritance
+
 #include <iostream>
 using namespace std;
+
 class calculator
 {
 public:
     int a, b;
-    void get()
+
+    void get_num()
     {
         cout << "Enter value of a : ";
         cin >> a;
-        cout << "Enter value of b : ";
+        cout << endl
+             << "Enter value of b : ";
         cin >> b;
     }
+};
 
-    void addition()
+class addition : public calculator
+{
+public:
+    int add()
     {
-        cout << "\nAddition : " << a + b;
+        cout << "\nAddition is : " << a + b;
     }
-    void subtraction()
+};
+
+class subtraction : public calculator
+{
+public:
+    int sub()
     {
-        if (a < b)
-        {
-            cout << "\nSubtraction : " << b - a;
-        }
-        else
-        {
-            cout << "\nSubtraction : " << a - b;
-        }
+        cout << "\nSubtraction is : " << a - b;
     }
-    void multiplication()
+};
+
+class multiplication : public calculator
+{
+public:
+    int multi()
     {
-        cout << "\nMultipliaction : " << a * b;
+        cout << "Multiplication is : " << a * b;
     }
-    void division()
+};
+
+class division : public calculator
+{
+public:
+    int div()
     {
-        cout << "\nDivition : " << a / b;
+        cout << "\nDivision is " << a / b;
     }
-} cal;
+};
+
+class modulo : public calculator
+{
+public:
+    int mod()
+    {
+        cout << "\nModulo is : " << a % b;
+    }
+};
 
 int main()
 {
-    cal.get();
-    cal.addition();
-    cal.subtraction();
-    cal.multiplication();
-    cal.division();
+    int choice;
+    cout << "\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Modulo";
+    cout << "\nEnter your choice : ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        addition add;
+        add.get_num();
+        add.add();
+        break;
+    case 2:
+        subtraction sub;
+        sub.get_num();
+        sub.sub();
+        break;
+    case 3:
+        multiplication mul;
+        mul.get_num();
+        mul.multi();
+        break;
+    case 4:
+        division div;
+        div.get_num();
+        div.div();
+        break;
+    case 5:
+        modulo mod;
+        mod.get_num();
+        mod.mod();
+        break;
+
+    default:
+        cout << "Invalid Choice";
+        break;
+    }
     return 0;
 }
