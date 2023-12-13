@@ -1,0 +1,30 @@
+• What is OOP? List OOP concepts
+-> OOP stands for Object Oriented Programming.
+-> The base of OOP is object.
+-> Using OOP concepts, we can build more user friendly and easy to understand code.
+    • OOP concepts :
+    1. Class
+    2. Object
+    3. Encapsulation
+    4. Abstract
+    5. Polymorphism
+    6. Inheritance
+
+• What is the difference between OOP and POP?
+-> OOP :
+    - OOP stands for Object Oriented Programming.
+    - OOP focus on object.
+    - OOP is slower than POP.
+    - In OOP program divided into objects.
+    - Using OOP, we can use code reusability functionality.
+    - It's complex to understand.
+    - It's suitable for complex problem solving.
+
+-> POP :
+    - POP stands for Procedure Oriented Programming.
+    - POP focus on procedure.
+    - POP more faster than OOP.
+    - In POP, program divided into functions.
+    - POP doesn't have code reusability functionality.
+    - It's easy to understand.
+    - It's not suitable for complex problem solving.
