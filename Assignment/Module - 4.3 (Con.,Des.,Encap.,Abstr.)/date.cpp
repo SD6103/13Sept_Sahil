@@ -30,6 +30,29 @@ public:
         {
             cout << "Day is invalid";
         }
+        else if (month == 2)
+        {
+            if (year % 4 != 0 && day == 29)
+            {
+                cout << "This year is leap, February don't have 29 days.";
+            }
+        }
+        else if (month < 1)
+        {
+            cout << "Please enter a month.";
+        }
+        else if (month > 12)
+        {
+            cout << "A year have only 12 months, so please enter month carefully!!";
+        }
+        else if (year < 1900 || year > 2100)
+        {
+            cout << "Please enter year carefully.";
+        }
+        else
+        {
+            cout << "Date : " << day << " - " << month << " - " << year;
+        }
     }
 };
 
@@ -37,5 +60,5 @@ int main()
 {
     date date;
     date.get();
-    date.set();
+    date.validate();
 }
