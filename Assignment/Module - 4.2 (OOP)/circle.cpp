@@ -3,13 +3,14 @@ Write a C++ program to implement a class called Circle that has private member v
 */
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
 class circle
 {
-    int radius;
+    int radius; // data member
 
 public:
+    // member function
     void area()
     {
         cout << "Enter radius of circle : ";
@@ -20,6 +21,7 @@ public:
         cout << "Area of circle : " << area;
     }
 
+    // member function
     void circumference()
     {
         cout << endl
@@ -34,8 +36,8 @@ public:
 
 int main()
 {
-    circle cir;
-    cir.area();
-    cir.circumference();
+    circle cir;          // creating object
+    cir.area();          // function calling
+    cir.circumference(); // functino calling
     return 0;
 }

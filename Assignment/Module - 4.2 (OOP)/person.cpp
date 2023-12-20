@@ -1,14 +1,16 @@
 // Write a C++ program to create a class called Person that has private member variables for name, age and country. Implement member functions to set and get the values of these variables.
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
 class person
 {
+    // data member
     char name[20], country[20];
     int age;
 
 public:
+    // member function
     void get()
     {
         cout << "Enter Your name : ";
@@ -19,6 +21,7 @@ public:
         cin >> country;
     }
 
+    // member function
     void set()
     {
         cout << endl
@@ -32,7 +35,7 @@ public:
 
 int main()
 {
-    person per;
-    per.get();
-    per.set();
+    person per; // creating object
+    per.get();  // function calling
+    per.set();  // function calling
 }

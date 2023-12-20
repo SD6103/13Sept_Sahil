@@ -14,14 +14,16 @@ Member Functions
 */
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class bank
+class bank // creating class
 {
 public:
+    // data member
     char name[20], acc_type[20];
     int acc_no, balance, diposite_amt, withdraw_amt, choice;
 
+    // member function
     void values()
     {
         cout << "Enter your Name : ";
@@ -34,6 +36,7 @@ public:
         cin >> balance;
     }
 
+    // member function
     void deposite()
     {
         cout << "Please enter amount you want to deposite : ";
@@ -42,6 +45,7 @@ public:
         cout << "Your account balance : " << balance;
     }
 
+    // member function
     void withdraw()
     {
         cout << "Enter amount you want to withdraw : ";
@@ -58,6 +62,7 @@ public:
         }
     }
 
+    // member function
     void disp_balance()
     {
         cout << "Your name is " << name << " your account balance is " << balance;
@@ -66,14 +71,15 @@ public:
 
 int main()
 {
-    bank bank_obj;
-    bank_obj.values();
+    bank bank_obj;     // creating object of class
+    bank_obj.values(); // call the fucntion of class using object
     cout << "What you want to do :" << endl
          << "1. Diposite" << endl
          << "2. Withdraw" << endl
          << "3. Check Balance : ";
-    cin >> bank_obj.choice;
+    cin >> bank_obj.choice; // getting value from user
 
+    // switch case
     switch (bank_obj.choice)
     {
     case 1:

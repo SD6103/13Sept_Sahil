@@ -2,13 +2,15 @@
 
 #include <iostream>
 
-using namespace std;
+using namespace std; // library file
 
 class Rectangle
 {
+    // data member
     int length, width;
 
 public:
+    // member function
     int area(int l, int w)
     {
         this->length = l;
@@ -17,6 +19,7 @@ public:
         return 0;
     }
 
+    // member function
     int perimeter(int l, int w)
     {
         this->length = l;
@@ -29,13 +32,13 @@ public:
 
 int main()
 {
-    int length, width;
+    int length, width; // variable
     cout << "Enter length of rectangle : ";
     cin >> length;
     cout << "Enter width of rectangle : ";
     cin >> width;
 
-    Rectangle rect;
-    rect.area(length, width);
-    rect.perimeter(length, width);
+    Rectangle rect;                // object
+    rect.area(length, width);      // function calling
+    rect.perimeter(length, width); // function calling
 }
