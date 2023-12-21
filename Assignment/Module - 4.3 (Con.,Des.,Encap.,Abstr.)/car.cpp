@@ -1,14 +1,16 @@
 // Write a C++ program to create a class called Car that has private member variables for company, model, and year. Implement member functions to get and set these variables.
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class car
+class car // class calling
 {
+    // data member
     char company[20], model[20];
     int year;
 
 public:
+    // member function
     void get()
     {
         cout << "Enter car company name : ";
@@ -19,6 +21,7 @@ public:
         cin >> year;
     }
 
+    // member function
     void set()
     {
         cout << endl
@@ -32,7 +35,7 @@ public:
 
 int main()
 {
-    car car;
-    car.get();
-    car.set();
+    car car;   // object
+    car.get(); // function calling
+    car.set(); // function calling
 }

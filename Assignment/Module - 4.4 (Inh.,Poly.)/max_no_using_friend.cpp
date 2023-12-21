@@ -1,17 +1,18 @@
 // Write a program to find the max number from given two numbers using friend function
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class max_no
+class max_no // class creation
 {
-    int a, b;
+    int a, b; // data member
 
 public:
+    // creating friend function
     friend int find(max_no &obj);
 };
 
-int find(max_no &obj)
+int find(max_no &obj) // friend function
 {
     cout << "Enter Value of a : ";
     cin >> obj.a;
@@ -34,7 +35,7 @@ int find(max_no &obj)
 
 int main()
 {
-    max_no max;
-    find(max);
+    max_no max; // object
+    find(max);  // function calling
     return 0;
 }

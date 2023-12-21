@@ -2,12 +2,15 @@
 
 #include <iostream>
 
-using namespace std;
+using namespace std; // library file
 
-class cricketer
+class cricketer // class creaion
 {
 public:
+    // data member
     string name, team;
+
+    // member function
     int get_data()
     {
         cout << "Enter Batsman name : ";
@@ -17,11 +20,13 @@ public:
     }
 };
 
-class batsman : public cricketer
+class batsman : public cricketer // child class creation
 {
 public:
+    // data member
     int total_run, total_match, avg_run, best_perform;
 
+    // member function
     int get_details()
     {
         cout << "Enter Total run of Batsman : ";
@@ -32,12 +37,14 @@ public:
         cin >> best_perform;
     }
 
+    // member function
     int avg()
     {
         avg_run = total_run / total_match;
         return 0;
     }
 
+    // member function
     int print_details()
     {
         cout << endl
@@ -55,7 +62,8 @@ public:
 
 int main()
 {
-    batsman bat;
+    batsman bat; // object
+    // function calling
     bat.get_data();
     bat.get_details();
     bat.avg();

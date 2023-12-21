@@ -2,15 +2,16 @@
 
 #include <iostream>
 
-using namespace std;
+using namespace std; // library file
 
-class bank_account
+class bank_account // creating class
 {
+    // data member
     int acc_no, balance, diposite_amt, withdraw_amt;
 
 public:
-    void
-    get_data()
+    // member function
+    void get_data()
     {
         cout << "Enter Account Number : ";
         cin >> acc_no;
@@ -18,6 +19,7 @@ public:
         cin >> balance;
     }
 
+    // member function
     void diposite()
     {
         cout << "Enter amount you want to diposite : ";
@@ -25,6 +27,7 @@ public:
         balance = balance + diposite_amt;
     }
 
+    // member function
     void withdraw()
     {
         cout << "Enter amount you want to withdraw : ";
@@ -42,14 +45,15 @@ public:
 
 int main()
 {
-    int choice;
-    bank_account bank_acc;
-    bank_acc.get_data();
+    int choice;            // variable
+    bank_account bank_acc; // object
+    bank_acc.get_data();   // function calling
     cout << "What you want to do : " << endl
          << "1. Diposite" << endl
          << "2. Withdraw : ";
     cin >> choice;
 
+    // switch case
     switch (choice)
     {
     case 1:
@@ -64,4 +68,6 @@ int main()
         cout << "Invalid Choice";
         break;
     }
+
+    return 0;
 }

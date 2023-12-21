@@ -1,25 +1,29 @@
 // Assume that the test results of a batch of students are stored in three different classes. Class Students are storing the roll number. Class Test stores the marks obtained in two subjects and class result contains the total marks obtained in the test. The class result can inherit the details of the marks obtained in the test and roll number of students. (Multilevel Inheritance)
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class student
+class student // class calling
 {
 public:
+    // data member
     int roll_no;
 };
 
-class test
+class test : public student // class creation
 {
 public:
+    // data member
     int sub_1, sub_2;
 };
 
-class result : public student, public test
+class result : public test // child class creation
 {
 public:
+    // data member
     int total;
 
+    // member function
     int get_result()
     {
         cout << "Enter roll no : ";
@@ -30,6 +34,7 @@ public:
         cin >> sub_2;
     }
 
+    // member functino
     int print_result()
     {
         cout << endl
@@ -46,8 +51,8 @@ public:
 
 int main()
 {
-    result res;
-    res.get_result();
-    res.print_result();
+    result res;         // object
+    res.get_result();   // function calling
+    res.print_result(); // function calling
     return 0;
 }

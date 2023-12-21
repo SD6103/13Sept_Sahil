@@ -1,12 +1,12 @@
 // Write a program of Addition, Subtraction, Division, Multiplication using constructor.
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class addition
+class addition // creating class
 {
 public:
-    addition(int a, int b)
+    addition(int a, int b) // peremeterize constructor
     {
         cout << endl
              << "Addtion : " << a + b;
@@ -16,7 +16,7 @@ public:
 class substraction
 {
 public:
-    substraction(int a, int b)
+    substraction(int a, int b) // peremeterize constructor
     {
         if (a < b)
         {
@@ -34,7 +34,7 @@ public:
 class multiplication
 {
 public:
-    multiplication(int a, int b)
+    multiplication(int a, int b) // peremeterize constructor
     {
         cout << endl
              << "Multiplication : " << a * b;
@@ -44,7 +44,7 @@ public:
 class division
 {
 public:
-    division(float a, float b)
+    division(float a, float b) // peremeterize constructor
     {
         cout << endl
              << "Division : " << a / b;
@@ -53,12 +53,13 @@ public:
 
 int main()
 {
-    int no1, no2;
+    int no1, no2; // variable
     cout << "Enter Number 1 : ";
     cin >> no1;
     cout << "Enter Nunmber 2 : ";
     cin >> no2;
 
+    // object creation and constructor calling
     addition add(no1, no2);
     substraction sub(no1, no2);
     multiplication mul(no1, no2);

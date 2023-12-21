@@ -2,13 +2,15 @@
 
 #include <iostream>
 
-using namespace std;
+using namespace std; // library file
 
-class date
+class date // class creation
 {
+    // data member
     int day, month, year;
 
 public:
+    // memer function
     void get()
     {
         cout << "Enter a day : ";
@@ -19,11 +21,13 @@ public:
         cin >> year;
     }
 
+    // member function
     void set()
     {
         cout << "Date : " << day << " - " << month << " - " << year;
     }
 
+    // member function
     void validate()
     {
         if (day < 1 || day > 31)
@@ -58,7 +62,7 @@ public:
 
 int main()
 {
-    date date;
-    date.get();
-    date.validate();
+    date date;       // object
+    date.get();      // function calling
+    date.validate(); // function calling
 }

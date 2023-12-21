@@ -1,15 +1,16 @@
 // Write a C++ program to implement a class called Employee that has private member variables for name, employee ID, and salary. Include member functions to calculate and set salary based on employee performance. Using of constructor
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class employee
+class employee // class creation
 {
+    // data member
     string name;
     int emp_id, salary, performance;
 
 public:
-    employee()
+    employee() // constructor
     {
         cout << "Enter Employee id : ";
         cin >> emp_id;
@@ -42,6 +43,7 @@ public:
         }
     }
 
+    // member function
     void print_data()
     {
         cout << endl
@@ -55,6 +57,6 @@ public:
 
 int main()
 {
-    employee emp;
-    emp.print_data();
+    employee emp;     // object
+    emp.print_data(); // function calling
 }

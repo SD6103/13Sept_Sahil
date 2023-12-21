@@ -1,31 +1,34 @@
 // Write a program of to sort the array using templates
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-template <class T>
+template <typename T> // creating template
 
-T sort(T arr[10])
+class sorting // class creation
 {
-    for (int i = 0; i <= 10; i++)
+    sorting(T arr) // constructor with template
     {
-        for (int j = i + 1; j <= 10; j++)
+        for (int i = 0; i <= 10; i++)
         {
-            if (arr[i] > arr[j])
+            for (int j = i + 1; j <= 10; j++)
             {
-                T temp;
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                if (arr[i] > arr[j])
+                {
+                    T temp;
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
             }
         }
     }
-}
+};
 
 int main()
 {
-    int array[10] = {25, 42, 1, 68, 75, 4, 9, 63, 55, 6};
-    sort(array);
+    int array[10] = {25, 42, 1, 68, 75, 4, 9, 63, 55, 6}; // array
+    sorting<int> srt(array);                              // object
     for (int i = 0; i <= 10; i++)
     {
         cout << array[i] << " ";

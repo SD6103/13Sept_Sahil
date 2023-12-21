@@ -1,17 +1,19 @@
 // Write a program to swap the two numbers using friend function without using third variable
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class swaping
+class swaping // class creation
 {
+    // data member
     int a, b;
 
 public:
+    // friend function creation
     friend int swp_no(swaping &obj);
 };
 
-int swp_no(swaping &obj)
+int swp_no(swaping &obj) // friend function
 {
     cout << "Enter number 1 : ";
     cin >> obj.a;
@@ -30,7 +32,7 @@ int swp_no(swaping &obj)
 
 int main()
 {
-    swaping s1;
-    swp_no(s1);
+    swaping s1; // object creation
+    swp_no(s1); // friend function calling
     return 0;
 }

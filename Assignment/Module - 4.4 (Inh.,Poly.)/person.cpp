@@ -1,21 +1,24 @@
 // Create a class person having members name and age. Derive a class student having member percentage. Derive another class teacher having member salary. Write necessary member function to initialize, read and write data. Write also Main function (Multiple Inheritance)
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class person
+class person // class creation
 {
 public:
+    // data member
     string name;
     int age;
 };
 
-class student : public person
+class student : public person // child class creation
 {
 public:
+    // data member
     int sub_1, sub_2, sub_3, total;
     float per;
 
+    // member function
     int get_data()
     {
         cout << "Enter Student Name : ";
@@ -31,12 +34,14 @@ public:
         cin >> sub_3;
     }
 
+    // member function
     void percentage()
     {
         total = sub_1 + sub_2 + sub_3;
         per = total / 300;
     }
 
+    // member function
     int marksheet()
     {
         cout << endl
@@ -56,11 +61,13 @@ public:
     }
 };
 
-class teacher : public person
+class teacher : public person // child clss creation
 {
 public:
+    // data member
     int salary;
 
+    // member function
     int get_data()
     {
         cout << "Enter Teacher Name : ";
@@ -71,6 +78,7 @@ public:
         cin >> salary;
     }
 
+    // member function
     int print_data()
     {
         cout << endl
@@ -84,7 +92,7 @@ public:
 
 int main()
 {
-    int choice;
+    int choice; // variable
     cout << "What you want to do : " << endl
          << "1. Marksheet" << endl
          << "2. Salary : ";

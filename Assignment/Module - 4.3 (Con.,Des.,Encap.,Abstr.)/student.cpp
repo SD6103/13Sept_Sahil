@@ -1,15 +1,17 @@
 // Write a C++ program to implement a class called Student that has private member variables for name, class, roll number, and marks. Include member functions to calculate the grade based on the marks and display the student's information. Accept address from each student implement using of aggregation
 
 #include <iostream>
-using namespace std;
+using namespace std; // library file
 
-class student
+class student // class creation
 {
+    // data member
     string name, address;
     char grade;
     int roll_no, std, sub_1, sub_2, sub_3, total;
 
 public:
+    // member function
     void get_data()
     {
         cout << "Enter Your roll no. : ";
@@ -22,6 +24,7 @@ public:
         cin >> std;
     }
 
+    // member function
     void cal_grade()
     {
         cout << "Enter your mark of subject 1 : ";
@@ -63,6 +66,7 @@ public:
         }
     }
 
+    // member function
     void print_data()
     {
         cout << endl
@@ -86,8 +90,8 @@ public:
 
 int main()
 {
-    student stud;
-    stud.get_data();
-    stud.cal_grade();
-    stud.print_data();
+    student stud;      // object
+    stud.get_data();   // fucntion calling
+    stud.cal_grade();  // function calling
+    stud.print_data(); // function calling
 }
