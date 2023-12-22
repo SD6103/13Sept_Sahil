@@ -21,7 +21,7 @@ void menu()
 }
 
 // creating order() function for user's choice
-void order()
+int order()
 {
     switch (choice)
     {
