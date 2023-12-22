@@ -6,22 +6,22 @@ using namespace std; // library file
 class math_op // class creation
 {
 public:
-    int addition(int a, int b, int c) // function creation with int peremeter
+    int calc(int a, int b) // function creation with int peremeter
     {
-        return a + b + c;
+        return a + b;
     }
 
-    int subtraction(int a, int b) // function creation with int peremeter
+    int calc(float a, float b) // function creation with int peremeter
     {
         return a - b;
     }
 
-    int multiplication(int a, int b, int c) // function creation with int peremeter
+    int calc(long a, long b) // function creation with long peremeter
     {
-        return a * b * c;
+        return a * b;
     }
 
-    int division(float a, float b) // function creation with int peremeter
+    int calc(double a, double b) // function creation with float peremeter
     {
         return a / b;
     }
@@ -34,17 +34,15 @@ int main()
     cin >> n1;
     cout << "Enter number 2 : ";
     cin >> n2;
-    cout << "Enter number 3 : ";
-    cin >> n3;
     math_op math; // object
     // function calling
     cout << endl
-         << "addition : " << math.addition(n1, n2, n3);
+         << "addition : " << math.calc(n1, n2);
     cout << endl
-         << "subtraction : " << math.subtraction(n1, n2);
+         << "subtraction : " << math.calc(n1, n2);
     cout << endl
-         << "multiplication : " << math.multiplication(n1, n2, n3);
+         << "multiplication : " << math.calc(n1, n2);
     cout << endl
-         << "division : " << math.division(n1, n2);
+         << "division : " << math.calc(n1, n2);
     return 0;
 }
