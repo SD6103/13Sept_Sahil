@@ -1,0 +1,37 @@
+• Create database : 
+create database stud_data
+----------------------------------------------------------------
+• Create Student table:
+create table Student
+(
+	Rollno int primary key auto_increament,
+	Name varchar(20),
+	Branch varchar(50),
+);
+-----------------------------------------------------------------
+• Insert Records in student table:
+insert into student values("1","Jay","Computer Science");
+insert into student values("2","Suhani","Electronic and Com");
+insert into student values("3","Kriti","Electronic and Com");
+------------------------------------------------------------------
+• Create Exam table:
+create table Exam 
+(
+    Rollno int PRIMARY KEY AUTO_INCREMENT,
+    S_code varchar(10),
+    Marks int,
+    P_code varchar(10)
+);
+------------------------------------------------------------------
+• Insert records in exam table:
+insert into exam values
+("1","CS11","50","CS"),
+("1","CS11","60","CS"),
+("2","EC101","66","EC"),
+("2","EC102","70","EC"),
+("3","EC101","45","EC"),
+("3","EC102","50","EC")
+------------------------------------------------------------------
+• add foreign key:
+alter table exam ADD FOREIGN KEY(Rollno) REFERENCES student(Rollno);
+------------------------------------------------------------------

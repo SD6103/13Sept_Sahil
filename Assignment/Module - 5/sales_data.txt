@@ -1,0 +1,53 @@
+• create database:
+create database sales_data;
+-----------------------------------------
+• create table:
+create table salesperson
+(
+    sno int(5) PRIMARY KEY AUTO_INCREMENT,
+    sname varchar(20),
+    city varchar(20),
+    comm int
+)
+----------------------------------------
+• insert records in salesperson table:
+insert into salesperson values
+(1001,'Peel','London',.12),
+(1002,'Sarres','San Jose',.13),
+(1004,'Motika','London',.11),
+(1007,'Rafkin',Barcelona,.15),
+(1003,'Axelrod','New york',.1);
+-----------------------------------------
+• create customer table:
+create table customer
+(
+    cnm int PRIMARY KEY AUTO_INCREMENT,
+    cname varchar(20),
+    city varchar(20),
+    rating int
+    sno int,
+    FOREIGN KEY(sno) REFERENCES salesperson(sno)
+);
+----------------------------------------
+• insert records in customer table:
+insert into customer VALUES
+(201,'Hoffman','London',100,1001),
+(202,'Giovanne','Roe',200,1003),
+(203,'Liu','San Jose',300,1002),
+(204,'Grass','Brcelona',100,1002),
+(206,'Clemens','London',300,1007),
+(207,'Pereira','Roe',100,1004)
+---------------------------------------
+• All orders for rating more than 100.
+select * from customer where rating > 100;
+---------------------------------------
+• Names and cities of all salespeople in London with commission above 0.12
+select `sname`,`city` from salesperson where `city` = 'london' AND `comm` >= .12;
+---------------------------------------
+• All salespeople either in Barcelona or in London
+select `sname` from salesperson where city = 'london' OR city = 'Barcelona';
+---------------------------------------
+• All salespeople with commission between 0.10 and 0.12. (Boundary valuesshould be excluded).
+SELECT sname from salesperson where comm > 0.10 and comm < 0.12;
+---------------------------------------
+• All customers excluding those with rating <= 100 unless they are located inRome

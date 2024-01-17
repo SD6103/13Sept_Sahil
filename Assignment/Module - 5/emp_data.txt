@@ -1,0 +1,55 @@
+• create database:
+create database emp_data;
+-------------------------------------------------------
+• create table employee:
+create table employee
+(
+    employee_id int PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(20),
+    last_name varchar(20),
+    salary int,
+    joining_data varchar(30),
+    department varchar(25)
+);
+-------------------------------------------------------
+• Insert record into employee table:
+insert into employee VALUES
+(1,"John","Abraham",1000000,"01-JAN-13 12:00:00 AM","Banking"),
+(2,"Micheal","Clarke",800000,"01-JAN-13 12:00:00 AM","Insurance"),
+(3,"Roy","Thomas",700000,"01-FEB-13 12:00:00 AM","Banking"),
+(4,"Tom","Jose",600000,"01-FEB-13 12:00:00 AM","Insurance"),
+(5,"Jerry","Pinto",650000,"01-FEB-13-12:00:00 AM","Insurance"),
+(6,"Philip","Mathew",750000,"01-JAN-13 12:00:00 AM","Services"),
+(7,"TestName1",123,650000,"01-JAN-13 12:00:00 AM","Services"),
+(8,"TestName2","Lname%",600000,"01-FEB-13 12:00:00 AM","Insurance");
+---------------------------------------------------------
+• create incentive table:
+create table Incentive
+(
+    Employee_ref_id int,
+    Incentive_date varchar(25),
+    Incentive_amount int
+);
+---------------------------------------------------------
+• insert record into incentive table:
+insert into incentive VALUES
+(1,"01-FEB-13",5000),
+(2,"01-FEB-13",3000),
+(3,"01-FEB-13",4000),
+(1,"01-JAN-13",4500),
+(2,"01-JAN-13",3500);
+----------------------------------------------------------
+• Get First_Name from employee table using Tom name “Employee Name”.
+SELECT `first_name` from employee where `first_name` = "Tom";
+----------------------------------------------------------
+• Get FIRST_NAME, Joining Date, and Salary from employee table.
+select `first_name`,`joining_data`,`salary` from employee;
+----------------------------------------------------------
+• Get all employee details from the employee table order by First_Name Ascending and Salary descending?
+
+----------------------------------------------------------
+• Get employee details from employee table whose first name contains ‘J’.
+select * from employee where first_name like 'j%';
+----------------------------------------------------------
+• Get department wise maximum salary from employee table order by salaryascending?
+
