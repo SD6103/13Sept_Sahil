@@ -51,3 +51,4 @@ select `sname` from salesperson where city = 'london' OR city = 'Barcelona';
 SELECT sname from salesperson where comm > 0.10 and comm < 0.12;
 ---------------------------------------
 • All customers excluding those with rating <= 100 unless they are located inRome
+SELECT * from customer where `city` != 'Roe' AND rating >=100;
