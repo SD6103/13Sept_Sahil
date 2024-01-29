@@ -58,4 +58,4 @@ SELECT DISTINCT(`department`), MAX(`salary`) FROM employee GROUP BY `department`
 SELECT employee.first_name, incentive.Incentive_amount from employee INNER JOIN incentive on employee.employee_id = incentive.Employee_ref_id where incentive.Incentive_amount > 3000;
 ----------------------------------------------------------
 • Create After Insert trigger on Employee table which insert records in viewtable
-create TRIGGER trig_emp AFTER INSERT on employee for EACH ROW BEGIN insert into employee (`employee_id`,`first_name`,`last_name`,`salary`,`joining_data`,`department`) VALUES (new.employee_id,new.first_name,new.last_name,new.salary,new.joining_data,new.department); END;
+DELIMETER $$ create TRIGGER trig_emp AFTER INSERT on employee for EACH ROW BEGIN insert into employee (`employee_id`,`first_name`,`last_name`,`salary`,`joining_data`,`department`) VALUES (new.employee_id,new.first_name,new.last_name,new.salary,new.joining_data,new.department); END $$;
