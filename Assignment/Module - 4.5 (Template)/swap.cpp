@@ -1,34 +1,29 @@
 // Write a program of to swap the two values using template
-
 #include <iostream>
-using namespace std; // library file
+using namespace std;
+template <typename T>
 
-template <typename swap> // template creation
-
-class swaping // class creation
+class Swapper
 {
-
 public:
-    swaping(swap a, swap b) // constructor with template
+    // Constructor without member initializer list
+    Swapper(T &a, T &b)
     {
-        int c;
-        c = a;
+        T c = a;
         a = b;
         b = c;
-        cout << endl
-             << "Value of a : " << a;
-        cout << endl
-             << "Value of b : " << b;
     }
 };
 
 int main()
 {
-    int a, b; // variable
-    cout << "Enter value of a : ";
-    cin >> a;
-    cout << "Enter value of b : ";
-    cin >> b;
-    swaping<int> swp(a, b); // functino calling with template
+    int x = 5, y = 10;
+    cout << "Before swapping: " << x << " " << y << endl;
+
+    // Swap the values of x and y using the swapValues template function
+    Swapper<int>(x, y);
+
+    cout << "After swapping: " << x << " " << y << endl;
+
     return 0;
 }
