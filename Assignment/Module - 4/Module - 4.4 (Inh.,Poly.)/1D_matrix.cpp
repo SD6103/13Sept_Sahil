@@ -52,7 +52,7 @@ int main()
     cout << "Enter elements for the second matrix:" << endl;
     M2.get(); // get value for second array
 
-    // Adding two matrices
+    // Addition of two matrices
     M3 = M1 + M2;
 
     // Displaying the result
