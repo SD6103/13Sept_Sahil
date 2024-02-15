@@ -1,40 +1,46 @@
 // Write a program to concatenate the two strings using Operator Overloading
 
 #include <iostream>
-#include <string.h>
+#include <string>
 
 using namespace std; // library file
 
-class concat
+class Concat // class creation
 {
 public:
     // data member
-    char a[20];
+    string str;
+
     // member function
-    void get(char str[20])
+    void get_string(string str)
     {
-        strcpy(a, str);
+        this->str = str;
     }
 
-    // operator overloading
-    concat operator+(concat &c2)
+    // member function
+    void show_string()
     {
-        concat c3;
-        cout << endl
-             << "Concatination : " << a << c2.a;
-        return c3;
+        cout << "New String : " << str;
+    }
+
+    // Operator Overloading with + operator
+    Concat operator+(Concat &obj2)
+    {
+        Concat obj3;
+        obj3.str = str + obj2.str;
+        return obj3;
     }
 };
 
 int main()
 {
-    char s1[20], s2[20]; // variable
-    cout << "Enter string 1 : ";
-    cin >> s1;
-    cout << "Enter string 2 : ";
-    cin >> s2;
-    concat obj1, obj2, obj3; // object creation
-    obj1.get(s1);            // function call
-    obj2.get(s2);            // function call
-    obj3 = obj1 + obj2;      // concatination through objects
+    // objects
+    Concat c1;
+    Concat c2;
+    Concat c3;
+    c1.get_string("ABC"); // get first string with first object
+    c2.get_string("XYZ"); // get second string with second object
+    c3 = c1 + c2;         // concat strings with + operator
+    c3.show_string();     // function calling
+    return 0;
 }

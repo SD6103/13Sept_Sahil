@@ -6,42 +6,27 @@ using namespace std; // library file
 class swap_no // class creation
 {
 private:
-    int no1, no2; // data member
+    int no; // data member
 
 public:
-    swap_no(int a, int b) // peramerterized constructor
-    {
-        no1 = a; // assign the value of a to no1
-        no2 = b; // assign the value of b to no2
-    }
-
-    friend int swap(swap_no &sn); // friend function creation
-
-    void display_no()
-    {
-        cout << "Numbers after swapping: " << no1 << " " << no2 << endl;
-    }
+    friend int swap(swap_no &obj, swap_no &obj2); // friend function creation
 };
 
-int swap(swap_no &sn) // friend function
+int swap(swap_no &obj1, swap_no &obj2) // friend function
 {
-    // main logic of swap
-    sn.no1 = sn.no1 + sn.no2;
-    sn.no2 = sn.no1 - sn.no2;
-    sn.no1 = sn.no1 - sn.no2;
+    obj1.no = 10;
+    obj2.no = 20;
+    obj1.no = obj1.no + obj2.no;
+    obj2.no = obj1.no - obj2.no;
+    obj1.no = obj1.no - obj2.no;
+
+    cout << "Swap Value : " << obj1.no << " " << obj2.no;
 }
 
 int main()
 {
-    int num1, num2; // variables
-    cout << "Enter two numbers: ";
-    cin >> num1 >> num2;
-
-    swap_no sn(num1, num2); // object creation
-    cout << "Numbers before swapping: " << num1 << " " << num2 << endl;
-
-    swap(sn);        // friend function calling
-    sn.display_no(); // display function calling
-
+    swap_no s1;
+    swap_no s2;
+    swap(s1, s2);
     return 0;
 }

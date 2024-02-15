@@ -8,6 +8,10 @@ class student // class calling
 public:
     // data member
     int roll_no;
+    void get_no(int roll_no)
+    {
+        this->roll_no = roll_no;
+    }
 };
 
 class test : public student // class creation
@@ -15,6 +19,12 @@ class test : public student // class creation
 public:
     // data member
     int sub_1, sub_2;
+
+    void get_marks(int sub1, int sub2)
+    {
+        this->sub_1 = sub1;
+        this->sub_2 = sub2;
+    }
 };
 
 class result : public test // child class creation
@@ -22,17 +32,6 @@ class result : public test // child class creation
 public:
     // data member
     int total;
-
-    // member function
-    int get_result()
-    {
-        cout << "Enter roll no : ";
-        cin >> roll_no;
-        cout << "Enter Mark of subject 1 : ";
-        cin >> sub_1;
-        cout << "Enter Mark of subject 2 : ";
-        cin >> sub_2;
-    }
 
     // member functino
     int print_result()
@@ -51,8 +50,9 @@ public:
 
 int main()
 {
-    result res;         // object
-    res.get_result();   // function calling
+    result res;
+    res.get_no(10);
+    res.get_marks(50, 60);
     res.print_result(); // function calling
     return 0;
 }
