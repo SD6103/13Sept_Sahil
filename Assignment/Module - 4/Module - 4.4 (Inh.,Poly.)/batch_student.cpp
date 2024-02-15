@@ -32,6 +32,7 @@ class result : public test // child class creation
 public:
     // data member
     int total;
+    float per;
 
     // member functino
     int print_result()
@@ -45,14 +46,17 @@ public:
         total = sub_1 + sub_2;
         cout << endl
              << "Total Marks : " << total;
+        per = total / 2;
+        cout << endl
+             << "Percentage : " << per;
     }
 };
 
 int main()
 {
     result res;
-    res.get_no(10);
-    res.get_marks(50, 60);
-    res.print_result(); // function calling
+    res.get_no(10);        // function calling
+    res.get_marks(50, 60); // function calling
+    res.print_result();    // function calling
     return 0;
 }
