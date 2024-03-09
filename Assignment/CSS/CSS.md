@@ -38,23 +38,23 @@
 
 • CSS2 :
 
-    - CSS splits up different sections of the code into modules.
+    => CSS splits up different sections of the code into modules.
 
-    - There is no backward compatibility with CSS2.
+    => There is no backward compatibility with CSS2.
 
-    - With CSS2 only web safe fonts can be used.
+    => With CSS2 only web safe fonts can be used.
 
-    - CSS2 doesn’t support the border box property.
+    => CSS2 doesn’t support the border box property.
 
 • CSS3 :
 
-    - CSS and HTML were put into a single file, there was no concept of modules before.
+    => CSS and HTML were put into a single file, there was no concept of modules before.
 
-    - There is backward compatibility maintained with CSS3.
+    => There is backward compatibility maintained with CSS3.
 
-    - With CSS3 special fonts can be used such as those Google Fonts and TypeCast.
+    => With CSS3 special fonts can be used such as those Google Fonts and TypeCast.
 
-    - CSS3 supports the border box property.
+    => CSS3 supports the border box property.
 
 ---
 
