@@ -36,7 +36,7 @@
 
 ### What is the difference between CSS2 and CSS3?
 
-=> CSS2 :
+• CSS2 :
 
     - CSS splits up different sections of the code into modules.
 
@@ -46,7 +46,7 @@
 
     - CSS2 doesn’t support the border box property.
 
-=> CSS3 :
+• CSS3 :
 
     - CSS and HTML were put into a single file, there was no concept of modules before.
 
