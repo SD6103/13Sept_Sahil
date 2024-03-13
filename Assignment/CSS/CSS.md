@@ -87,3 +87,83 @@
 => Opacity value defines lower than 1, for example 0.5 value of opacity means 60%.
 
 ---
+
+## Q-6
+
+### How can the background color of an element be changed?
+
+=> We can change the background color of elements using “background-color” proprerty.
+
+```
+
+element {
+	background-color : black;
+}
+
+```
+
+---
+
+## Q-7
+
+### How can image repetition of the backup be controlled?
+
+=> => We can stop repetition of background image to set background no repeat.
+
+```
+
+element {
+    background-image : url(‘abc.jpg’);
+    background-repeat : no-repeat;
+}
+
+```
+
+---
+
+## Q-8
+
+### What is the use of the background-position property?
+
+=> Using background-position property, we can set the position of background image.
+
+=> For Ex. If we have to show image from the center position, so we can use “background-position : center;”.
+
+```
+
+element {
+	background-image : url(‘abc.jpg’);
+	background-position : center;
+}
+
+```
+
+---
+
+## Q-9
+
+### Which property controls the image scroll in the background?
+
+=> background-attachment property used to control the image scroll in background.
+
+```
+
+element {
+	background-attachment : fixed;
+}
+
+```
+
+=> There are many other values like
+
+=> scroll : background image scroll with page. By default.
+
+=> local : background image scroll with the element’s content.
+
+---
+
+## Q-10
+
+### Why should background and color be used as separate properties?
+
+=> The main difference between background and background-color is we can set image in background, but we can’t set image in background-color. Background-color only allows to set background color.
