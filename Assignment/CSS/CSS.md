@@ -295,6 +295,7 @@ element {
 
 <link rel="stylesheet" href="style.css">
 
+
 ```
 
 => Main benefit of External CSS, We can use the css file in the multiple HTML file, so we don’t have to write the code multiple time.
