@@ -167,3 +167,182 @@ element {
 ### Why should background and color be used as separate properties?
 
 => The main difference between background and background-color is we can set image in background, but we can’t set image in background-color. Background-color only allows to set background color.
+
+---
+
+## Q-11
+
+### How to center block elements using CSS1?
+
+=> In CSS1, we use ‘text-align: center’ property to center a block element.
+
+```
+
+element {
+	text-align: center;
+}
+
+```
+
+---
+
+## Q-12
+
+### How to maintain the CSS specifications?
+
+=> There are some CSS specifications :
+
+• Use clear and consistent name for classes and IDs.
+
+• Use comments in your css file to avoid complexity.
+
+• Keep your CSS file separate from the HTML file. This will give good look to your code.
+
+• Implement responsive design to your website for the various of screens and devices.
+
+• Use case-sensitiveness in your code.
+
+• Syntax of CSS : selector { property : value; }
+
+---
+
+## Q-13
+
+### What are the ways to integrate CSS as a web page?
+
+=> We can integrate CSS as a web page in 3 ways :
+
+1. Inline CSS :
+
+=> Inline CSS used within the tag.
+
+=> Ex.
+
+```
+	<p style=”color:red;”>Hello</p>
+
+```
+
+2. Internal CSS :
+
+=> Internal CSS used within the head tag in the same file.
+
+=> Ex.
+
+```
+	<head>
+		<style>
+			p {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Hello</p>
+	</body>
+
+```
+
+3. External CSS :
+
+=> External CSS is used as a separated file of css extenstion.
+
+=> To use this file in HTML file, we have to link the css file in the HTML file.
+
+=> To link the file :
+
+```
+
+<link rel="stylesheet" href="style.css">
+
+```
+
+---
+
+## Q-14
+
+### What is embedded style sheets?
+
+=> Embedded style sheet known as internal style sheet.
+
+=> It’s define within the <head> tag.
+
+```
+
+<head>
+	<style>
+		/* CSS Code */
+	</style>
+</head>
+
+```
+
+---
+
+## Q-15
+
+### What are the external style sheets?
+
+=> External style sheet is a separate file from the HTML file.
+
+=> This file takes .css extension.
+
+=> For use this file we have to link the css file in the HTML file.
+
+=> To link the file :
+
+```
+
+<link rel="stylesheet" href="style.css">
+
+```
+
+=> Main benefit of External CSS, We can use the css file in the multiple HTML file, so we don’t have to write the code multiple time.
+
+---
+
+## Q-16
+
+### What are the advantages and disadvantages of using external style sheets?
+
+=> Advantages :
+
+• With the help of external style sheet, we can implement the css file in the multiple HTML file.
+
+• Modifying the appearance of a website is straightforward with CSS.
+
+• You can make changes quickly to fonts, colors, layouts etc.•
+
+=> Disadvantage :
+
+• If the external css file fails to load, the styling of your web page may break.
+
+• Managing multiple external CSS files for a large website can become complex.
+
+• Modern browser generally supports external CSS files without any issues, but some older browsers may have limitations.
+
+---
+
+## Q-17
+
+### What is the meaning of the CSS selector?
+
+=> CSS selector used to select the elements you want to style.
+
+=> CSS selector are the part of CSS rule set.
+
+=> CSS selectors select HTML elements according to its id, class, tag, etc.
+
+=> Element selector (tag name)
+
+=> ID selector (# sign)
+
+=> Class selector (. Sign)
+
+=> Universal selector (\* sign)
+
+=> Group Selector (, sign)
+
+=> There is many other selectors adjacent sibling selector, general sibling selector etc.
+
+---
