@@ -347,3 +347,59 @@ element {
 => There is many other selectors adjacent sibling selector, general sibling selector etc.
 
 ---
+
+## Q-18
+
+### What are the media types allowed by CSS?
+
+=> There is three media types allowed by CSS :
+
+• All : Which is used for all media type screen
+
+• Print : Which is used for print preview mode
+
+• Screen : Which is used for all difference types of screens like mobile, tablet, laptop etc.
+
+=> Here is the syntax of media query :
+
+```
+
+@media screen (max-width / min-width : size of screen) {
+	/* your css code */
+}
+
+```
+
+---
+
+## Q-19
+
+### What is the rule set?
+
+=> Here is the main example of CSS :
+
+```
+
+.container {
+	color : black;
+}
+
+```
+
+=> CSS ruleset :
+
+• First of all we have to declare the class,id or element name which we want to style, in this case we used class selector which is defiend by ( . )
+
+• Then we have to declare blocks, this blocks defines the starting and ending point of style.
+
+• The main CSS code writen in the blocks.
+
+• In the main code there is two perameters :
+
+    => property name : which defines what style you want to give the element.
+
+    => value : which defines the value of property.
+
+• Each line of CSS seperated by the semicolon (;).
+
+---
