@@ -2,21 +2,21 @@
 
 ### What are the new tags added in HTML5?
 
-=> <header> - Defines the header for a document.
+=> header - Defines the header for a document.
 
-=> <footer> - Defines a footer for a document.
+=> footer - Defines a footer for a document.
 
-=> <main> - Specifies the main content of document.
+=> main - Specifies the main content of document.
 
-=> <nav> - Defines a set of navigation links.
+=> nav - Defines a set of navigation links.
 
-=> <article> - Defines an independent piece of content in document, such as a blog post or a news article.
+=> article - Defines an independent piece of content in document, such as a blog post or a news article.
 
-=> <section> - Defines a section for a document.
+=> section - Defines a section for a document.
 
-=> <figure> - Represents content such as images, diagrams, code listings etc.
+=> figure - Represents content such as images, diagrams, code listings etc.
 
-=> <figcaption> - Defines a caption for '<figure>' element.
+=> figcaption - Defines a caption for "figure" element.
 
 ---
 
@@ -24,7 +24,7 @@
 
 ### How to embed audio and video in a webpage?
 
-=> <audio> :
+=> audio tag :
 
 ```
 
@@ -36,15 +36,15 @@
 
 => Some attributes of Audio Tag :
 
-    - autoplay : When the page is loaded audio will stated automatically.
+• autoplay : When the page is loaded audio will stated automatically.
 
-    - controls : It display audio control.
+• controls : It display audio control.
 
-    - muted : When the page is loaded audio will be automatically muted.
+• muted : When the page is loaded audio will be automatically muted.
 
-    - loop : Audio start again when it is finished.
+• loop : Audio start again when it is finished.
 
-=> <video> -
+=> video tag :
 
 ```
 
@@ -56,13 +56,13 @@
 
 => Some attributes of Video Tag :
 
-    - autoplay : When the page is loaded video will stated automatically.
+• autoplay : When the page is loaded video will stated automatically
 
-    - controls : It display video control such as play, pause and stop.
+• controls : It display video control such as play, pause and stop
 
-    - muted : When the page is loaded video will be automatically muted.
+• muted : When the page is loaded video will be automatically muted
 
-    - loop : Video start again when it is finished.
+• loop : Video start again when it is finished.
 
 ---
 
@@ -72,21 +72,21 @@
 
 => Semantic Element is used to described meaning of element to browser and developers.
 
-=> Example of Semantic element : <form>, <table>, <section>, <header>, <footer> etc., it will defines its content.
+=> Example of Semantic element : form, table, section, header, footer etc., it will defines its content.
 
 => Sematic Elment is also help to browser to understand what kind of data contains in the elements.
 
 => Some Exmpales of Semantic Element :
 
-    - <header> - Defines the header for a document.
+• header - Defines the header for a document.
 
-    - <footer> - Defines a footer for a document.
+• footer - Defines a footer for a document.
 
-    - <main> - Specifies the main content of document.
+• main - Specifies the main content of document.
 
-    - <nav> - Defines a set of navigation links.
+• nav - Defines a set of navigation links.
 
-    - <section> - Defines a section for a document.
+• section - Defines a section for a document.
 
 ---
 
@@ -96,13 +96,13 @@
 
 • Canvas tag :
 
-    - HTML <canvas> is used to draw graphics via javascript.
+• HTML canvas tag is used to draw graphics via javascript.
 
-    - <canvas> is only a container for graphics, you must have to use javascript to actually draw graphics.
+• canvas tag is only a container for graphics, you must have to use javascript to actually draw graphics.
 
-    - <canvas> is supported by all the major browsers.
+• canvas tag is supported by all the major browsers.
 
-=> Syntax of <canvas> :
+=> Syntax of canvas tag :
 
 ```
 
@@ -114,7 +114,7 @@
 
 • SVG Tag :
 
-=> In HTML5, <svg> tag is used to embed SVG (Scalable Vector Graphics) content directly into HTML document.
+=> In HTML5, svg tag is used to embed SVG (Scalable Vector Graphics) content directly into HTML document.
 
 => SVG is a markup language for describing two dimensional graphics in XML format.
 
