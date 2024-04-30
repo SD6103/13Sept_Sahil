@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body {
+  overflow: hidden;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  text-align: end;
+  gap: 40px;
+  padding: 100px;
+  background-color: rgb(31, 31, 31);
+}
+
+.content h1 {
+  padding: 0 20px 0 0;
+  position: relative;
+  color: #f4f5f9;
+  margin: 15px 0;
+}
+
+.content h1::after {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #e74c3c;
+}
+
+.content .service-card h3 {
+  color: #e74c3c;
+  margin: 0 0 10px 0;
+}
+
+.content .service-card p {
+  color: #999999;
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+
+.thumbnail {
+  width: 45%;
+  height: 100%;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.content img {
+  position: absolute;
+}
+
+.content .icons img:nth-child(1) {
+  top: 180px;
+  left: 785px;
+}
+
+.content .icons img:nth-child(2) {
+  top: 315px;
+  left: 785px;
+}
+
+.content .icons img:nth-child(3) {
+  top: 455px;
+  left: 785px;
+}
