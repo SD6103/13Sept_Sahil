@@ -19,6 +19,7 @@ header {
   background-blend-mode: color-burn;
   background-color: #000000cc;
   position: relative;
+  z-index: -1;
 }
 
 header .navbar {
@@ -114,8 +115,26 @@ header .btns .btn2 {
   font-size: 0.8rem;
 }
 
+.clipbtn {
+  position: absolute;
+  top: -25px;
+  left: 730px;
+  z-index: 1;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .service {
   padding: 80px 200px;
+  z-index: -1;
+  position: relative;
 }
 
 .wrapper {

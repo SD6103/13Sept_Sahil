@@ -31,15 +31,17 @@
             <div class="form-map">
                 <form action="">
                     <div class="input-control">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Company">
+                        <input type="text" placeholder="Name" required pattern="[A-Za-z]{3,6}"
+                            title="You must have to enter your name within 3 to 6 letters.">
+                        <input type=" text" placeholder="Company" required>
                     </div>
                     <div class="input-control">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Mobile">
+                        <input type="email" placeholder="Email" required>
+                        <input type="text" placeholder="Mobile" required pattern="[0-9]{10}" maxlength="10"
+                            title="Please enter a 10-digit mobile number">
                     </div>
                     <div class="input-control">
-                        <textarea name="" id="" placeholder="Message" rows="5"></textarea>
+                        <textarea name="" id="" placeholder="Message" rows="5" required></textarea>
                     </div>
                     <div class="input-control">
                         <button class="btn">Send</button>

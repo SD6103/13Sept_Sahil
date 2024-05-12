@@ -108,13 +108,35 @@ element {
 
 ### How can image repetition of the backup be controlled?
 
-=> => We can stop repetition of background image to set background no repeat.
+=> We can stop repetition of background image to set background no repeat.
 
 ```
 
 element {
     background-image : url(‘abc.jpg’);
     background-repeat : no-repeat;
+}
+
+```
+
+=> We can also set background repeatation vertically and horizontally.
+
+=> For vertical repeatation :
+
+```
+element {
+    background-image : url(‘abc.jpg’);
+    background-repeat : repeat-y;
+}
+
+```
+
+=> For horizontally repeatation :
+
+```
+element {
+    background-image : url(‘abc.jpg’);
+    background-repeat : repeat-x;
 }
 
 ```
@@ -132,8 +154,8 @@ element {
 ```
 
 element {
-	background-image : url(‘abc.jpg’);
-	background-position : center;
+background-image : url(‘abc.jpg’);
+background-position : center;
 }
 
 ```
@@ -149,7 +171,7 @@ element {
 ```
 
 element {
-	background-attachment : fixed;
+background-attachment : fixed;
 }
 
 ```
@@ -179,7 +201,7 @@ element {
 ```
 
 element {
-	text-align: center;
+text-align: center;
 }
 
 ```
@@ -219,7 +241,8 @@ element {
 => Ex.
 
 ```
-	<p style=”color:red;”>Hello</p>
+
+    <p style=”color:red;”>Hello</p>
 
 ```
 
@@ -230,16 +253,17 @@ element {
 => Ex.
 
 ```
-	<head>
-		<style>
-			p {
-				color: red;
-			}
-		</style>
-	</head>
-	<body>
-		<p>Hello</p>
-	</body>
+
+    <head>
+    	<style>
+    		p {
+    			color: red;
+    		}
+    	</style>
+    </head>
+    <body>
+    	<p>Hello</p>
+    </body>
 
 ```
 
@@ -294,7 +318,6 @@ element {
 ```
 
 <link rel="stylesheet" href="style.css">
-
 
 ```
 
@@ -365,7 +388,7 @@ element {
 ```
 
 @media screen (max-width / min-width : size of screen) {
-	/* your css code */
+/_ your css code _/
 }
 
 ```
@@ -381,7 +404,7 @@ element {
 ```
 
 .container {
-	color : black;
+color : black;
 }
 
 ```
@@ -403,3 +426,7 @@ element {
 • Each line of CSS seperated by the semicolon (;).
 
 ---
+
+```
+
+```

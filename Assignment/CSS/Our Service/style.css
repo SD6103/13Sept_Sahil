@@ -29,6 +29,7 @@ body {
   gap: 40px;
   padding: 100px;
   background-color: rgb(31, 31, 31);
+  position: relative;
 }
 
 .content h1 {
@@ -73,16 +74,16 @@ body {
 }
 
 .content .icons img:nth-child(1) {
-  top: 225px;
-  left: 805px;
+  top: 270px;
+  right: -35px;
 }
 
 .content .icons img:nth-child(2) {
-  top: 360px;
-  left: 805px;
+  top: 405px;
+  right: -35px;
 }
 
 .content .icons img:nth-child(3) {
-  top: 500px;
-  left: 805px;
+  top: 545px;
+  right: -35px;
 }
