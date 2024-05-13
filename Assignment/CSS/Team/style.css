@@ -7,6 +7,10 @@
   font-family: "Open Sans";
 }
 
+body {
+  overflow-y: hidden;
+}
+
 section {
   height: 100vh;
   /* display: flex;
@@ -65,45 +69,74 @@ section::before {
 }
 
 .members .member {
-  position: relative;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.members .member img {
+  width: 50px;
+  height: 50px;
 }
 
 .job {
   position: absolute;
   bottom: -100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  width: 5rem;
+}
+
+.job h1 {
+  font-size: 16px;
+  color: rgb(231, 75, 59);
+}
+
+.job span {
+  font-size: 12px;
 }
 
 .members #member1 {
-  position: absolute;
-  top: 0;
-  color: white;
+  top: 200px;
+  left: 330px;
 }
 
-.member {
+.members #member2 {
+  top: 183px;
+  left: 550px;
 }
 
-/* .img1 {
-  position: absolute;
-  bottom: 215px;
-  left: 280px;
+.members #member3 {
+  top: 250px;
+  left: 730px;
 }
-.img2 {
-  position: absolute;
-  bottom: 100px;
-  left: 450px;
+
+.members #member4 {
+  top: 305px;
+  right: 550px;
 }
-.img3 {
-  position: absolute;
-  bottom: 175px;
-  left: 750px;
+
+.members #member5 {
+  top: 280px;
+  right: 350px;
 }
-.img4 {
-  position: absolute;
-  bottom: 135px;
-  right: 460px;
+
+.members #member1:hover #job1,
+.members #member2:hover #job2,
+.members #member3:hover #job3,
+.members #member4:hover #job4,
+.members #member5:hover #job5 {
+  bottom: -90px;
 }
-.img5 {
-  position: absolute;
-  bottom: 190px;
-  right: 250px;
-} */
+
+.members #member1:hover,
+.members #member2:hover,
+.members #member3:hover,
+.members #member4:hover,
+.members #member5:hover {
+  transform: scale(1.2);
+}
