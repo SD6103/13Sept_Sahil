@@ -1,0 +1,31 @@
+<!-- Write to print factorial of given number? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter a number"><br>
+    <button>Factorial</button><br>
+    <span></span>
+
+    <script>
+        let number = document.querySelector("#number");
+        let btn = document.querySelector("button");
+        let fact = 1;
+
+        btn.addEventListener("click", () => {
+            for (let i = 1; i <= number.value; i++) {
+                fact = fact * i;
+            }
+            console.log(fact);
+        })
+    </script>
+</body>
+
+</html>

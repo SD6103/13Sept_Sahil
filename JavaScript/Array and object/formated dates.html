@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formated Dates</title>
+</head>
+
+<body>
+    <script>
+        let date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        if (day < 10) {
+            day = "0" + date.getDate();
+        }
+
+        if (month < 10) {
+            month = "0" + (date.getMonth() + 1);
+        }
+
+        console.log(`Format 1 : ${month}-${day}-${year}`);
+        console.log(`Format 2 : ${month}/${day}/${year}`);
+        console.log(`Format 1 : ${day}-${month}-${year}`);
+        console.log(`Format 1 : ${day}/${month}/${year}`);
+    </script>
+</body>
+
+</html>

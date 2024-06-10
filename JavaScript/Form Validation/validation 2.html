@@ -1,0 +1,49 @@
+<!-- Form in Email, number, Password, Validation? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation 2</title>
+</head>
+
+<body>
+    <input type="email" id="email" placeholder="Enter Email Address"><br>
+    <input type="text" id="mobnumber" placeholder="Enter Mobile Number"><br>
+    <input type="password" id="password" placeholder="Enter Password"><br>
+    <button>Submit</button><br>
+    <span></span>
+
+    <script>
+        let email = document.querySelector("#email");
+        let mno = document.querySelector("#mobnumber");
+        let pass = document.querySelector("#password");
+        let btn = document.querySelector("button");
+        let span = document.querySelector("span");
+
+        span.style.color = "red";
+        span.style.fontWeight = "bold";
+        btn.addEventListener("click", () => {
+            if (email.value == "" && mno.value == "" && pass.value == "") {
+                span.innerHTML = `*Fill all the fields.`
+                email.focus();
+            }
+            else if (email.value == "") {
+                span.innerHTML = `*Enter Email Address`;
+                email.focus();
+            }
+            else if (mno.value == "") {
+                span.innerHTML = `*Enter Mobile Number`;
+                mno.focus();
+            }
+            else if (pass.value == "") {
+                span.innerHTML = `*Enter Password`;
+                pass.focus()
+            }
+        })
+    </script>
+</body>
+
+</html>

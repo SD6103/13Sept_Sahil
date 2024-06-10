@@ -1,0 +1,40 @@
+<!-- Form Validtion in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation 1</title>
+</head>
+
+<body>
+    <input type="text" id="fname" placeholder="Enter First Name"><br>
+    <input type="text" id="lname" placeholder="Enter Last Name"><br>
+    <input type="email" id="email" placeholder="Enter Email Address"><br>
+    <button>Submit</button><br>
+    <span></span>
+
+    <script>
+        function validation() {
+            let btn = document.querySelector("button");
+
+            btn.addEventListener("click", () => {
+                let fname = document.querySelector("#fname").value;
+                let lname = document.querySelector("#lname").value;
+                let email = document.querySelector("#email").value;
+                let span = document.querySelector("span");
+                span.style.color = "red";
+                span.style.fontWeight = 'bold'
+                if (fname == "" && lname == "" && email == "") {
+                    span.innerHTML = "*Fill all the fields."
+                }
+            })
+        }
+
+        validation()
+    </script>
+</body>
+
+</html>

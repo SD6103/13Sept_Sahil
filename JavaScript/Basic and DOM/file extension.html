@@ -1,0 +1,28 @@
+<!-- Write a JavaScript exercise to get the extension of a filename.? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Extension</title>
+</head>
+
+<body>
+    <input type="text" id="filename" placeholder="Enter a file name with extension"><br>
+    <button>Get Extension</button><br>
+    <span></span>
+    <script>
+        let filename = document.querySelector("#filename");
+        let btn = document.querySelector("button")
+
+        btn.addEventListener("click", () => {
+            let extension = filename.value.slice(filename.value.indexOf('.') + 1);
+            document.querySelector("span").innerHTML = `File Extension is : ${extension}`;
+            console.log(extension);
+        })
+    </script>
+</body>
+
+</html>

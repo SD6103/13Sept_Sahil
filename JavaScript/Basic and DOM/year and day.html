@@ -1,0 +1,41 @@
+<!-- WAP to convert years into days and days into years? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year and Day</title>
+</head>
+
+<body>
+    <input type="text" name="" id="day" placeholder="Enter Number of day"><br>
+    <button id="yearbtn">Convert to Years</button><br>
+    <span id="daytoyear"></span><br><br>
+
+    <input type="text" name="" id="year" placeholder="Enter Number of years"><br>
+    <button id="daybtn">Convert to Days</button><br>
+    <span id="yeartoday"></span>
+
+    <script>
+        let day = document.querySelector("#day");
+        let year = document.querySelector("#year");
+        let dayToYear = document.querySelector("#daytoyear");
+        let yearToDay = document.querySelector("#yeartoday");
+        let yearbtn = document.querySelector("#yearbtn");
+        let daybtn = document.querySelector("#daybtn");
+
+        yearbtn.addEventListener("click", () => {
+            let totalyears = (day.value / 365).toFixed(1);
+            dayToYear.innerHTML = `Total Days : ${totalyears}`;
+        })
+
+        daybtn.addEventListener("click", () => {
+            totalDays = (year.value * 365).toFixed(1);
+            yearToDay.innerHTML = `Total Days : ${totalDays}`;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!-- Create basic math operation in JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .control {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btns button {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>Maths Operations</h3>
+        <div class="control">
+            <label for="no1">Enter 1st Number : </label>
+            <input type="text" id="no1"><br>
+        </div>
+        <div class="control">
+            <label for="no2">Enter 2st Number : </label>
+            <input type="text" id="no2"><br>
+        </div>
+        <div class="control">
+            <label for="total">Total : </label>
+            <input type="text" id="total" readonly><br>
+        </div>
+        <div class="btns">
+            <button id="add">+</button>
+            <button id="sub">-</button>
+            <button id="mul">*</button>
+            <button id="div">/</button>
+            <button id="mod">%</button>
+        </div>
+    </div>
+
+    <script>
+        let no1 = document.querySelector("#no1")
+        let no2 = document.querySelector("#no2")
+        let total = document.querySelector("#total")
+
+        function addition(num1, num2) {
+            return num1 + num2;
+        }
+        function substraction(num1, num2) {
+            return num1 - num2;
+        }
+        function multiplication(num1, num2) {
+            return num1 * num2;
+        }
+        function division(num1, num2) {
+            return num1 / num2;
+        }
+        function modulo(num1, num2) {
+            return num1 % num2;
+        }
+
+        let add = document.querySelector("#add");
+        let sub = document.querySelector("#sub");
+        let mul = document.querySelector("#mul");
+        let div = document.querySelector("#div");
+        let mod = document.querySelector("#mod");
+
+        add.addEventListener("click", () => {
+            total.value = `${addition(Number(no1.value), Number(no2.value))}`
+        })
+
+        sub.addEventListener("click", () => {
+            total.value = `${substraction(Number(no1.value), Number(no2.value))}`
+        })
+
+        mul.addEventListener("click", () => {
+            total.value = `${multiplication(Number(no1.value), Number(no2.value))}`
+        })
+
+        div.addEventListener("click", () => {
+            total.value = `${division(Number(no1.value), Number(no2.value))}`
+        })
+
+        mod.addEventListener("click", () => {
+            total.value = `${modulo(Number(no1.value), Number(no2.value))}`
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- Check if typeof '10' is exactly equal to 10. If not make it exactly equal? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check '10' or 10</title>
+</head>
+
+<body>
+    <p>We've to convert string to number if we want it true.</p>
+    <p>But if we're going to compare </p>
+
+    <script>
+        let a = 10;
+        let b = '10';
+
+        // if we're compare it using == operator and without converting string to number then it returns true.
+        (a == b) ? console.log('True') : console.log("False");
+
+        // if we're comapre it using === operator and without converting string to number then it returns false.
+        (a === b) ? console.log('True') : console.log("False");
+
+        b = Number('10');
+
+        // now it's returns True
+        (a == b) ? console.log('True') : console.log("False");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!-- Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -5) in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First and Last Digit Summation</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter number"><br>
+    <button>Summation</button><br>
+    <span></span>
+    <script>
+        let number = document.querySelector("#number")
+        let btn = document.querySelector("button")
+
+        btn.addEventListener("click", () => {
+            let str = number.value.toString();
+            let firstDigit = Number(str.charAt(0))
+            let lastDigit = Number(str.charAt(str.length - 1));
+            let sum = firstDigit + lastDigit;
+            document.querySelector("span").innerHTML = `Summation of First and Last Digit : ${sum}`;
+        })
+    </script>
+</body>
+
+</html>

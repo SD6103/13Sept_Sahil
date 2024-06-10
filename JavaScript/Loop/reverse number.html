@@ -1,0 +1,28 @@
+<!-- Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter Number"><br>
+    <button>Reverse</button><br>
+    <span></span>
+    <script>
+
+        let number = document.querySelector("#number");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            document.querySelector("span").innerHTML = `Reverse Number : ${(Number(String(number.value).split('').reverse().join('')))}`;
+        })
+
+    </script>
+</body>
+
+</html>

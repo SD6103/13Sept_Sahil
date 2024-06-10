@@ -1,0 +1,44 @@
+<!-- ii. Vowel or Consonant using switch case in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel or Consonent</title>
+</head>
+
+<body>
+    <input type="text" id="char" placeholder="Enter a character">
+    <button>Check</button>
+    <span></span>
+
+    <script>
+        let char = document.querySelector("#char");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            switch (char.value) {
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U':
+                    document.querySelector("span").innerHTML = "It's Vowel."
+                    break;
+
+                default:
+                    document.querySelector("span").innerHTML = "It's Consonent."
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>

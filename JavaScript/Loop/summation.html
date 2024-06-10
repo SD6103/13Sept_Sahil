@@ -1,0 +1,33 @@
+<!-- Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summation</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter Number"><br>
+    <button>Summation</button><br>
+    <span></span>
+
+    <script>
+        let number = document.querySelector('#number');
+        let btn = document.querySelector("button");
+
+        let sum = 0;
+        btn.addEventListener("click", () => {
+            let str = number.value.toString();
+            for (let i = 0; i < str.length; i++) {
+                sum = sum + Number(str[i]);
+            }
+            document.querySelector("span").innerHTML = `Summation : ${sum}`;
+        })
+
+    </script>
+</body>
+
+</html>

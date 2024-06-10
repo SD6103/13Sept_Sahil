@@ -1,0 +1,28 @@
+<!-- Convert temperature Fahrenheit to Celsius? (Conditional logic Question) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius</title>
+</head>
+
+<body>
+    <input type="text" id="feh" placeholder="Enter Fahrenheit"><br>
+    <button>Get Celsius</button><br>
+    <span></span>
+
+    <script>
+        let feh = document.querySelector("#feh");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            let cel = ((feh.value - 32) * 5 / 9).toFixed(0); // it will return zero decimal values after point
+            document.querySelector("span").innerHTML = `Celcius : ${cel}`;
+        })
+    </script>
+</body>
+
+</html>

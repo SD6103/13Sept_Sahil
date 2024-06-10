@@ -1,0 +1,32 @@
+<!-- Write the code for adding new elements dynamically? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Element</title>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <button>Add Element</button>
+
+    <script>
+        let box = document.querySelector(".box");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            let newChild = document.createElement("div");
+            newChild.classList.add(".child");
+
+            newChild.innerText = "I'm child";
+
+            box.appendChild(newChild);
+        })
+    </script>
+</body>
+
+</html>

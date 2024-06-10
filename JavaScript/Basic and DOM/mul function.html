@@ -1,0 +1,33 @@
+<!-- Write a mul Function Which will Work Properly When invoked With Following Syntax. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication function</title>
+</head>
+
+<body>
+    <input type="text" id="no1" placeholder="Enter number 1"><br>
+    <input type="text" id="no2" placeholder="Enter number 2"><br>
+    <button>Multiplication</button><br>
+    <span></span>
+
+    <script>
+        let no1 = document.querySelector("#no1")
+        let no2 = document.querySelector("#no2")
+        let span = document.querySelector("span")
+
+        function Multiplication(num1, num2) {
+            span.innerHTML = `Multiplication : ${num1 * num2}`
+        }
+
+        document.querySelector("button").addEventListener("click", () => {
+            Multiplication(Number(no1.value), Number(no2.value))
+        })
+    </script>
+</body>
+
+</html>

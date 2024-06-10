@@ -1,0 +1,29 @@
+<!-- Write to find number is even or odd using ternary operator in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd using ternary</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter a Number"><br>
+    <button>Check</button><br>
+    <span></span>
+
+    <script>
+        let number = document.querySelector("#number");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            number.value % 2 == 0
+                ? document.querySelector("span").innerHTML = `Number is Even.`
+                : document.querySelector("span").innerHTML = `Number is Odd.`
+        })
+    </script>
+</body>
+
+</html>

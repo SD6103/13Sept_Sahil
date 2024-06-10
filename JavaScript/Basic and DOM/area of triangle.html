@@ -1,0 +1,29 @@
+<!-- Write a JavaScript Program to find the area of a triangle? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+</head>
+
+<body>
+    <input type="text" id="base" placeholder="Enter base of triangle"><br>
+    <input type="text" id="height" placeholder="Enter Height of triangle"><br>
+    <button>Calculate</button><br>
+    <label for="area"></label>
+    <script>
+        let base = document.querySelector("#base");
+        let height = document.querySelector("#height");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            let area = (base.value * height.value) / 2;
+            let label = document.querySelector("label").innerHTML = `Area of Triangle : ${area}`;
+        })
+    </script>
+</body>
+
+</html>

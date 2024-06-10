@@ -1,0 +1,33 @@
+<!-- 
+A
+B C
+D E F
+G H I J
+K L M N O 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern 3</title>
+</head>
+
+<body>
+    <script>
+        let alpha = 65;
+        let str = ''
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                str += `${String.fromCharCode(alpha)} `;
+                alpha++;
+            }
+            str += '\n'
+        }
+        console.log(str);
+    </script>
+</body>
+
+</html>

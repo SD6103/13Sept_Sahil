@@ -1,0 +1,55 @@
+<!-- Write a JavaScript Program to display the current day and time in the following format. Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formated Date</title>
+</head>
+
+<body>
+    <script>
+        let date = new Date();
+
+        let weekDay = date.getDay();
+
+        let weekDayName;
+        switch (weekDay) {
+            case 1:
+                weekDayName = "Monday"
+                break;
+            case 2:
+                weekDayName = "Tuesday"
+                break;
+            case 3:
+                weekDayName = "Wednesday"
+                break;
+            case 4:
+                weekDayName = "Thursday"
+                break;
+            case 5:
+                weekDayName = "Friday"
+                break;
+            case 6:
+                weekDayName = "Saturday"
+                break;
+            case 7:
+                weekDayName = "Sunday"
+                break;
+            default:
+                console.log("Invalid Weekday");
+        }
+
+        let hr = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+
+        let ampm = (hr >= 12) ? "PM" : "AM";
+
+        console.log(`Today is ${weekDayName}. Current Time is ${hr} ${ampm} : ${hr}:${min}:${sec}`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!-- Create result -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .btn button {
+            padding: 5px 25px;
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>Marksheet for Information Technology</h3>
+        <div class="control">
+            <label for="sub1">1. C Language</label>
+            <input type="text" id="sub1">
+        </div>
+        <div class="control">
+            <label for="sub2">2. C++ Language</label>
+            <input type="text" id="sub2">
+        </div>
+        <div class="control">
+            <label for="sub3">3. Databse</label>
+            <input type="text" id="sub3">
+        </div>
+        <div class="control">
+            <label for="sub4">4. HTML</label>
+            <input type="text" id="sub4">
+        </div>
+        <div class="control">
+            <label for="sub5">5. CSS</label>
+            <input type="text" id="sub5">
+        </div>
+        <div class="control">
+            <label for="sub6">6. PHP</label>
+            <input type="text" id="sub6">
+        </div>
+        <div class="control">
+            <label for="sub7">7. Core Java</label>
+            <input type="text" id="sub7">
+        </div>
+        <div class="btn">
+            <button>Result</button>
+        </div>
+        <div class="result">
+            <span class="total"></span>
+            <span class="percentage"></span>
+        </div>
+    </div>
+
+    <script>
+        let sub1 = document.querySelector("#sub1");
+        let sub2 = document.querySelector("#sub2");
+        let sub3 = document.querySelector("#sub3");
+        let sub4 = document.querySelector("#sub4");
+        let sub5 = document.querySelector("#sub5");
+        let sub6 = document.querySelector("#sub6");
+        let sub7 = document.querySelector("#sub7");
+        let total = document.querySelector(".total")
+        let per = document.querySelector(".percentage")
+        let btn = document.querySelector("button")
+
+        function result(s1, s2, s3, s4, s5, s6, s7) {
+            let marktotal = s1 + s2 + s3 + s4 + s5 + s6 + s7;
+            total.innerHTML = `Total : ${marktotal} / 350`;
+            per.innerHTML = `Percentage : ${(marktotal / 350 * 100).toFixed(2)}`
+        }
+
+        btn.addEventListener("click", () => {
+            result(Number(sub1.value), Number(sub2.value), Number(sub2.value), Number(sub4.value), Number(sub5.value), Number(sub6.value), Number(sub7.value))
+        }
+        )
+    </script>
+</body>
+
+</html>

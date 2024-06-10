@@ -1,0 +1,84 @@
+<!-- Dynamic Form Validation in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Validation</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="email" id="email" placeholder="Enter Email Address"><br>
+        <input type="text" id="username" placeholder="Enter Username"><br>
+        <input type="password" id="password" placeholder="Enter Password"><br>
+        <input type="password" id="con_password" placeholder="Enter Confirm Password"><br>
+        <button>Submit</button><br>
+        <span></span>
+    </form>
+
+    <script>
+        let span = document.querySelector("span");
+        let email = document.querySelector("#email");
+        let username = document.querySelector("#username");
+        let password = document.querySelector("#password");
+        let con_password = document.querySelector("#con_password");
+        let btn = document.querySelector("button");
+
+        span.style.color = "red";
+        span.style.fontWeight = "bold";
+
+        function containsNumber(str) {
+            if (str.length >= 8) {
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] >= '0' && str[i] <= '9') {
+                        return true;
+                    }
+                }
+            }
+            else {
+                span.innerHTML = "Password must be 8 character long"
+                password.focus();
+            }
+            return false;
+        }
+
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault()
+            let emailValue = email.value;
+            let usernameValue = username.value;
+            let passwordValue = password.value;
+            let conPasswordValue = con_password.value;
+
+            if (!emailValue && !usernameValue && !passwordValue && !conPasswordValue) {
+                span.innerHTML = "*Fill all the fields.";
+                email.focus();
+            } else if (!emailValue) {
+                span.innerHTML = "*Enter Email Address";
+                email.focus();
+            } else if (!usernameValue) {
+                span.innerHTML = "*Enter Username";
+                username.focus();
+            } else if (!passwordValue) {
+                span.innerHTML = "*Enter Password";
+                password.focus();
+            } else if (!containsNumber(passwordValue)) {
+                span.innerHTML = "*Password must contain at least one number";
+                password.focus();
+            } else if (passwordValue !== conPasswordValue) {
+                span.innerHTML = "*Enter confirm password similar to password";
+                con_password.focus();
+            } else {
+                span.innerHTML = "Form Submitted Successfully!";
+                span.style.color = "green"
+                document.querySelector("form").reset();
+
+            }
+        });
+    </script>
+</body>
+
+</html>

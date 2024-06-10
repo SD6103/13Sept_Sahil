@@ -1,0 +1,35 @@
+<!-- Check Number Is Positive or Negative in JavaScript? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive / Negative</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter Number"><br>
+    <button>Check</button><br>
+    <span></span>
+
+    <script>
+        let number = document.querySelector("#number");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            if (number.value > 0) {
+                document.querySelector("span").innerHTML = `Number is Positive.`
+            }
+            else if (number.value < 0) {
+                document.querySelector("span").innerHTML = `Number is Negative.`
+            }
+            else {
+                document.querySelector("span").innerHTML = `Number is 0.`;
+            }
+        })
+    </script>
+</body>
+
+</html>
