@@ -100,11 +100,11 @@
         function result(s1, s2, s3, s4, s5, s6, s7) {
             let marktotal = s1 + s2 + s3 + s4 + s5 + s6 + s7;
             total.innerHTML = `Total : ${marktotal} / 350`;
-            per.innerHTML = `Percentage : ${(marktotal / 350 * 100).toFixed(2)}`
+            per.innerHTML = `Percentage : ${(marktotal / 350 * 100).toFixed(2)} %`
         }
 
         btn.addEventListener("click", () => {
-            result(Number(sub1.value), Number(sub2.value), Number(sub2.value), Number(sub4.value), Number(sub5.value), Number(sub6.value), Number(sub7.value))
+            result(Number(sub1.value), Number(sub2.value), Number(sub3.value), Number(sub4.value), Number(sub5.value), Number(sub6.value), Number(sub7.value))
         }
         )
     </script>

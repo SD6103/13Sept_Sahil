@@ -14,19 +14,45 @@
     <input type="text" id="input2" placeholder="Enter Number 2">
     <input type="text" id="input3" placeholder="Enter Number 3">
     <button>Check Palindrome</button>
-    <span></span>
 
     <script>
-        let in1 = document.querySelector("input1")
-        let in2 = document.querySelector("input2")
-        let in3 = document.querySelector("input3")
+        let in1 = document.querySelector("#input1")
+        let in2 = document.querySelector("#input2")
+        let in3 = document.querySelector("#input3")
         let btn = document.querySelector("button")
 
-        let no1 = Number(in1)
-        let no2 = Number(in2)
-        let no3 = Number(in3)
         btn.addEventListener("click", () => {
-            // for (let i = 1; i <= no1; i)
+            let ogNumber1 = Number(in1.value);
+            let ogNumber2 = Number(in2.value);
+            let ogNumber3 = Number(in3.value);
+
+            let numbers = [ogNumber1, ogNumber2, ogNumber3]
+
+            let i = 0;
+            while (i < numbers.length) {
+                let number = numbers[i];
+
+                if (checkPalindrome(number)) {
+                    console.log(`${numbers[i]} is palindrome`);
+
+                } else {
+                    console.log(`${numbers[i]} is not palindrome`);
+                }
+                i++;
+            }
+
+            function checkPalindrome(number) {
+                let ogNumber = number;
+                let reverseNumber = 0;
+                while (number > 0) {
+                    let digit = number % 10;
+                    reverseNumber = reverseNumber * 10 + digit;
+                    number = Math.floor(number / 10);
+                }
+                return ogNumber === reverseNumber;
+            }
+
+
         })
     </script>
 </body>

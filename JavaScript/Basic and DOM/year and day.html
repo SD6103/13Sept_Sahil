@@ -27,7 +27,7 @@
         let daybtn = document.querySelector("#daybtn");
 
         yearbtn.addEventListener("click", () => {
-            let totalyears = (day.value / 365).toFixed(1);
+            let totalyears = (day.value / 365).toFixed(2);
             dayToYear.innerHTML = `Total Days : ${totalyears}`;
         })
 

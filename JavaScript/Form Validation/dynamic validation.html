@@ -39,7 +39,7 @@
                 }
             }
             else {
-                span.innerHTML = "Password must be 8 character long"
+                span.innerHTML = "Password must be 8 characters long."
                 password.focus();
             }
             return false;
@@ -65,13 +65,25 @@
             } else if (!passwordValue) {
                 span.innerHTML = "*Enter Password";
                 password.focus();
-            } else if (!containsNumber(passwordValue)) {
+            } else if (containsNumber(passwordValue)) {
                 span.innerHTML = "*Password must contain at least one number";
                 password.focus();
             } else if (passwordValue !== conPasswordValue) {
                 span.innerHTML = "*Enter confirm password similar to password";
                 con_password.focus();
-            } else {
+            } else if (emailValue.includes(' ')) {
+                span.innerHTML = "*Email has white space. Do not enter white space in email";
+                email.focus();
+            }
+            else if (!emailValue.includes("@") && (!emailValue.includes('.'))) {
+                span.innerHTML = "*Enter Valid Email with @ and .";
+                email.focus();
+            }
+            else if (usernameValue.length < 4) {
+                span.innerHTML = `*Username must be 4 charcaters long.`
+                username.focus();
+            }
+            else {
                 span.innerHTML = "Form Submitted Successfully!";
                 span.style.color = "green"
                 document.querySelector("form").reset();
