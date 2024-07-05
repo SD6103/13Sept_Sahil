@@ -63,19 +63,33 @@ let box = $(".box").removeClass("card")
 => We can provide multiple values in animate() method.
 
 ```
-<body>
-    <div class="box">hello</div>
-</body>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<sctipt>
-let box = $(".box")
-box.hover(() => {
-    box.animate({
-        left : "100px",
-        top : "50px",
-        opacity : "0.5",
-        fontSize : "25px"
-    })
-})
+        .box {
+            background-color: rgb(61, 63, 180);
+            width: 200px;
+            height: 200px;
+        }
+</style>
+
+<div class="box"></div>
+
+    <script>
+        let box = $(".box");
+        box.hover(() => {
+            box.animate({
+                width: '100vw',
+                height: "100vh",
+                opacity: "0.5",
+            })
+        })
+    </script>
 </script>
 ```
+
+---

@@ -21,13 +21,19 @@
             height: 100vh;
         }
 
-        .img-box {
+        .main {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+        }
+
+        .img-box {
+            display: flex;
             width: 500px;
             height: 300px;
-            /* overflow: hidden; */
+            transition: all 0.3s;
         }
 
         .img-box img {
@@ -61,17 +67,19 @@
 </head>
 
 <body>
-    <div class="img-box">
-        <img src="https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="">
-        <img src="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="">
-        <img src="https://images.unsplash.com/photo-1630945688054-a450ef980523?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="">
-        <img src="https://images.unsplash.com/photo-1678826537247-fc1e60fbda51?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="">
-        <img src="https://images.unsplash.com/photo-1671877077293-ae670e67f2af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="">
+    <div class="main">
+        <div class="img-box">
+            <img src="https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+            <img src="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1630945688054-a450ef980523?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1678826537247-fc1e60fbda51?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1671877077293-ae670e67f2af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+        </div>
     </div>
     <div class="btn">
         <button class="prev" onclick="changeSlide(-1)">
@@ -112,9 +120,9 @@
             else {
                 currentImg = index;
             }
-            $('img-box').css({
-                `transform` : `translateX(-${currentImg - 500}px)`
-        });
+            $('.img-box').css({
+                "transform": `translateX(-${currentImg * 500}px)`
+            });
         }
 
         function changeSlide(direction) {
