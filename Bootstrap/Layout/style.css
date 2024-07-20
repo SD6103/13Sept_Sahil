@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-section .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-section .card .img {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(58, 58, 58, 0.747);
+  border-radius: 50%;
+}
+
+.img-detail .img {
+  background-color: #eeeeee;
+  width: 300px;
+  height: 300px;
+}
+
+.carousel-item {
+  height: 70vh;
+}
+
+.carousel-item .img {
+  background-color: #777777;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  bottom: 2.25rem;
+}
