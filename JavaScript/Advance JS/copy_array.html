@@ -1,0 +1,42 @@
+<!-- 
+ Is array copied?
+let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" 
+let shoppingCart = fruits;
+shoppingCart.push("Banana"); // what's in fruits?
+alert( fruits.length ); // ? 
+-->
+<!-- 
+Is array copied?
+let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+alert( fruits.length ); // ?
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Array</title>
+</head>
+
+<body>
+    <script>
+        // create an array
+        let fruits = ["Apples", "Pear", "Orange"];
+
+        // assign in an new array
+        let shoppingCart = fruits;
+
+        // pushing new value into the new array
+        shoppingCart.push("Banana");
+
+        // alert for the get lenght of fruit array
+        alert(fruits.length); // 4
+
+
+        // shoppingCart is not an Copy of the Fruit array, both are the same reference to the same array, so we change any one of them then it will change in both
+    </script>
+</body>
+
+</html>

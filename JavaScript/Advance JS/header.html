@@ -1,0 +1,145 @@
+<!-- Create a responsive header using proper JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <!-- CSS Of header -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .close,
+        .toggle {
+            display: none;
+        }
+
+        @media (max-width: 786px) {
+            nav {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background-color: black;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            nav.show {
+                transform: translateX(0);
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .close {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 30px;
+            }
+
+            .toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <!-- logo -->
+        <div class="logo">
+            <h2>
+                Logo
+            </h2>
+        </div>
+        <!-- navbar -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+
+            <!-- close button for responsive design -->
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#ffffff"
+                    fill="none">
+                    <path d="M18 6L12 12M12 12L6 18M12 12L18 18M12 12L6 6" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </nav>
+
+        <!-- toggle button -->
+        <div class="toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#ffffff"
+                fill="none">
+                <path d="M4 5L16 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 19L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- script for header -->
+    <script>
+        // getting nav
+        let nav = document.querySelector("nav");
+
+        // open the navbar when device size is small
+        document.querySelector(".toggle").addEventListener("click", () => {
+            nav.classList.add("show"); // adding a show class to show navbar
+        });
+
+        // close the navbar when click on close button
+        document.querySelector(".close").addEventListener("click", () => {
+            nav.classList.remove("show"); // removing the show class to hide navbar
+        });
+    </script>
+    <!-- end script -->
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!-- Write a program of promises and handle that promises also -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        // creating a promise and store it into varibale
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Promise Completed");
+                resolve()
+            }, 2000);
+        })
+
+        promise.then(() => {
+            console.log("Promise resolved.");
+        })
+    </script>
+</body>
+
+</html>

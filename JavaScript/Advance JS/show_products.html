@@ -1,0 +1,127 @@
+<!-- Display all the product from the api in your HTML page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products List</title>
+
+    <!-- custom css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 0 30px 0;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 40px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            transition: all 0.3s;
+        }
+
+        .product:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .product .img-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .product img {
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+        }
+
+        .product .content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px 30px 20px 20px;
+        }
+
+        .product h3 {
+            font-size: 1.2rem;
+        }
+
+        .product p {
+            font-size: 0.9rem;
+        }
+
+        .product .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .product .rating {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All Products</h1>
+    <div class="product-container">
+
+    </div>
+
+    <script>
+        // fetching API
+        fetch("https://fakestoreapi.com/products")
+            .then(response => response.json()) // generate json of response
+            .then(products => {
+
+                let product_container = document.querySelector(".product-container")
+
+                // creating product card for all products
+                products.forEach(product => {
+                    product_container.innerHTML += `
+                        <div class="product">
+                            <div class="img-div">
+                                <img src="${product.image}" alt="${product.title}">
+                            </div>
+                            <div class="content">
+                                <h3>${product.title}</h3>
+                                <p>${product.description}</p>
+                                <span class="price">$${product.price}</span>
+                                <span class="rating">${product.rating.rate}/5</span>
+                            </div>
+                        </div>                
+                    `
+                });
+            })
+    </script>
+</body>
+
+</html>

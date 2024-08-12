@@ -1,0 +1,23 @@
+<!-- Use fetch method for calling an api https://fakestoreapi.com/products -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        // fetching the API using fetch() method
+        let url = fetch("https://fakestoreapi.com/products")
+            .then((res) => res.json()) // .then resolve the promise and convert api into json
+            .then((data) => { // this .then resolve the json into data and console the data.
+                console.log(data);
+            });
+    </script>
+</body>
+
+</html>

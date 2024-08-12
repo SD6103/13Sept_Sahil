@@ -1,0 +1,114 @@
+<!-- Create a modal box using css and Js with three buttons -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Box</title>
+
+    <!-- custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .modal-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        button {
+            padding: 8px 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .modal {
+            position: absolute;
+            top: 20px;
+            background-color: rgb(222, 222, 222);
+            padding: 20px;
+            width: 30%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- modal container -->
+    <div class="modal-container">
+        <button class="show">Show modal</button>
+
+        <!-- modal design -->
+        <div class="modal">
+            <h2>It's a modal</h2>
+            <!-- buttons of modal -->
+            <div class="btns">
+                <button>Yes</button>
+                <button>No</button>
+                <button>Cancel</button>
+            </div>
+            <!-- close button of modal -->
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
+                    fill="none">
+                    <path d="M18 6L12 12M12 12L6 18M12 12L18 18M12 12L6 6" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // getting elements from HTML
+        let modal = document.querySelector(".modal")
+        let show = document.querySelector(".show")
+        let close = document.querySelector(".close")
+
+        // event to show modal box
+        show.addEventListener("click", () => {
+            modal.style.top = "40%";
+            modal.style.opacity = "1";
+        });
+
+        // event to hide modal box
+        close.addEventListener("click", () => {
+            modal.style.top = "20px";
+            modal.style.opacity = "0";
+        });
+    </script>
+</body>
+
+</html>

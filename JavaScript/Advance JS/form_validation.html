@@ -1,0 +1,47 @@
+<!-- Create a form and validate using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <!-- form -->
+    <form action="" onclick="return false">
+        <input type="text" name="username" id="username" placeholder="Username"><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+        // getting elements from HTML
+        let username = document.querySelector("#username")
+        let password = document.querySelector("#password")
+        let btn = document.querySelector("#submit")
+
+        // button click event to validate form
+        btn.addEventListener("click", () => {
+            // regex for validate username
+            let userRegex = "^[A-Za-z]\\w{5, 29}$";
+            if (!userRegex.match(username.value)) {
+                alert("Enter valid username");
+                username.focus()
+                return false
+            }
+
+            // regex for validate password
+            let passwordRegex = "/^[a-zA-Z0-9!@#$%^&*]{6,16}$/";
+            if (!passwordRegex.match(password.value)) {
+                alert("Enter valid password");
+                password.focus()
+                return false
+            }
+        })
+    </script>
+</body>
+
+</html>

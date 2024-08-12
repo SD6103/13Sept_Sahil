@@ -1,0 +1,30 @@
+<!-- 
+Prevent the browser when i click the form submit button 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Button</title>
+</head>
+
+<body>
+    <!-- form -->
+    <form action="" id="form">
+        <input type="text" class="username" placeholder="Username"><br>
+        <input type="password" class="username" placeholder="password"><br>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+
+    <script>
+        // click event to prevent the page
+        document.querySelector("#form").addEventListener("submit", (e) => {
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

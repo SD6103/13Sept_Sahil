@@ -1,0 +1,51 @@
+<!--
+
+Destructuring assignment We have an object: Write the Destructuring assignment that reads:
+a)
+Name property into the variable name.
+b)
+Year’s property into the variable age.
+c)
+isAdmin property into the variable isAdmin (false, if no such property)
+d)
+let user = { name: "John", years: 30};
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+
+<body>
+    <script>
+        // user object
+        let user = { name: "John", years: 30 };
+
+        // assign the value of name into name variable
+        let name = user.name;
+        console.log(name);
+
+        // assign the value of age into age variable
+        let age = user.years;
+        console.log(age);
+
+        let isAdmin;  // creating undefined object
+
+        // conditiom for checking user is admin or not
+        if ("isAdmin" in user) {
+            isAdmin = "Admin"
+            console.log(isAdmin);
+        }
+        else {
+            isAdmin = "False"
+            console.log(isAdmin);
+        }
+    </script>
+</body>
+
+</html>

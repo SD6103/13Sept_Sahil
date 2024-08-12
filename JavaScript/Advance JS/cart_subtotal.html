@@ -1,0 +1,89 @@
+<!-- Calculate subtotal price of quantity in JavaScript? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Subtotal</title>
+
+    <style>
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        input {
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- cart design -->
+    <table>
+        <tr>
+            <th>Product Info</th>
+            <th>Quantity</th>
+            <th>Price (per unit)</th>
+            <th>Price (subtotal)</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Fortunti Wit-cow Hardware Oecnove Mxha</td>
+            <td><input type="number" min="1" max="10" value="1" class="quantity" data-price="29.99"></td>
+            <td>$29.99</td>
+            <td class="subtotal">$29.99</td>
+            <td><button>Remove</button></td>
+        </tr>
+        <tr>
+            <td>Woven Tre'lt: urcow Hydvwe C.
+                Rings - Bronte</td>
+            <td><input type="number" min="1" max="10" value="1" class="quantity" data-price="12.99"></td>
+            <td>$12.99</td>
+            <td class="subtotal">$12.99</td>
+            <td><button>Remove</button></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right;">Total:</td>
+            <td id="total">$72.97</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        // logic for calculating subtotal
+        let quantities = document.querySelectorAll(".quantity")
+        let subtotals = document.querySelectorAll(".subtotal")
+        let totalElm = document.querySelector("#total")
+
+        // getting quantity for calculating
+        quantities.forEach((qty) => {
+            qty.addEventListener("input", () => {
+                let total = 0;
+                quantities.forEach((quantity, index) => {
+                    let pricePerUnit = parseFloat(quantity.getAttribute("data-price"))
+                    let quantityValue = parseInt(quantity.value)
+                    let subtotal = pricePerUnit * quantityValue;
+                    subtotals[index].innerText = `$${subtotal.toFixed(2)}`;
+                    total += subtotal;
+                })
+                totalElm.innerText = `$${total.toFixed(2)}`
+            })
+        })
+    </script>
+</body>
+
+</html>

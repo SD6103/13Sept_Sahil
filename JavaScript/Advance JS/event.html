@@ -1,0 +1,83 @@
+<!-- How to used JavaScript Events to do all examples? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- custom CSS -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+            background-color: silver;
+        }
+
+        form {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- button click event -->
+    <button class="clickBtn">Click Me</button><br>
+    <span class="click"></span>
+
+    <!-- mousehover event -->
+    <div class="box"></div>
+
+    <!-- form submit event -->
+    <form action="#" class="form">
+        <input type="text" class="name" placeholder="Enter Name">
+        <input type="submit" value="Submit" class="submitBtn">
+    </form>
+    <span class="printName"></span>
+
+    <br>
+    <br>
+    <!-- keypress event -->
+    <span class="keypress"></span>
+    <script>
+        // button click event
+        document.querySelector(".clickBtn").addEventListener("click", () => {
+            document.querySelector(".click").innerHTML = "Button Clicked."
+        })
+
+        // mouseover and mouseleave event
+        document.querySelector(".box").addEventListener("mouseover", () => {
+            document.querySelector(".box").style.backgroundColor = "red"
+        })
+        document.querySelector(".box").addEventListener("mouseleave", () => {
+            document.querySelector(".box").style.backgroundColor = "silver"
+        })
+
+        // form submit event
+        document.querySelector(".form").addEventListener("submit", () => {
+            document.querySelector(".printName").innerHTML = `${document.querySelector(".name").value}`
+        })
+
+        // keypress event
+        document.addEventListener('keydown', function (e) {
+            if (e.key == 'Enter') {
+                document.querySelector(".keypress").innerHTML = 'Pressed Enter';
+            }
+        });
+
+        // window resize event
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 800) {
+                document.body.style.background = "gray"
+            }
+            else {
+                document.body.style.background = "white"
+
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- 
+Create a program that will select all the classes and loop over and whenever i click the button the alert should show 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Classes and show alerts</title>
+</head>
+
+<body>
+    <!-- create 3 divs and button -->
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <button class="btn">Click me</button>
+
+    <script>
+        // onclick event to show an alert for each element.
+        document.querySelector(".btn").addEventListener("click", () => {
+            let items = document.querySelectorAll(".item");
+            // use of forEach loop to get alert for all elements.
+            items.forEach((ele) => {
+                alert(`${ele.innerHTML}`)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!-- 
+The following function returns true if the parameter age is greater than
+18 Otherwise it asks for a confirmation and returns its result: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Confirmation</title>
+</head>
+
+<body>
+
+    <script>
+        // function for checking age if valid than return WELCOME message otherwise display confirm box.
+        function checkAge(age) {
+            if (age > 18) {
+                document.body.innerHTML = "<h1>WELCOME</h1>"
+            }
+            else {
+                if (confirm("Did your parents allow you?") == true) {
+                    document.body.innerHTML = "<h1>WELCOME</h1>"
+                }
+                else {
+                    document.body.innerHTML = "<h1>You're not allowed.</h1>"
+                }
+            }
+        }
+
+        checkAge(15)
+    </script>
+</body>
+
+</html>
