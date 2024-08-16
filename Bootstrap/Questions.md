@@ -180,11 +180,11 @@ ii> columns :
 
 => Key features of flexbox in bootstrap 4 :
 
-• Direction : control tje direction in which items are placed in the flex container.
+• Direction : control the direction in which items are placed in the flex container.
 
 • Alignmnemt : Align items within the flex container align both the main axis and cross axis.
 
-• Order : Chanfe the visual order of items without changing their source order.
+• Order : Change the visual order of items without changing their source order.
 
 i> Display flex :
 
@@ -196,11 +196,11 @@ ii> Direction :
 
 => .flex-row: Sets the flex direction to row.
 
-=> flex-row-reverse: Sets the flex direction to row-reverse.
+=> .flex-row-reverse: Sets the flex direction to row-reverse.
 
-=>.flex-column: Sets the flex direction to column.
+=> .flex-column: Sets the flex direction to column.
 
-=>.flex-column-reverse: Sets the flex direction to column-reverse.
+=> .flex-column-reverse: Sets the flex direction to column-reverse.
 
 iii> Justify Content :
 
@@ -244,9 +244,15 @@ iv> Align Items :
 
 ### How can one create an alert in Bootstrap?
 
-=> Thanks to pre-defined classes in Bootstrap to create alert.
+=> Using pre-defined classes we can create alert in Bootstrap.
 
-=> To create basic alert, use the ".alert" clas along with one of the pre-defined classes : ".alert-primary", ".alert-secondary", ".alert-success", ".alert-danger", ".alert-warning", ".alert-info", ".alert-light", ".alert-dark".
+=> To create basic alert, use the ".alert" class with one of the pre-defined classes : ".alert-primary", ".alert-secondary", ".alert-success", ".alert-danger", ".alert-warning", ".alert-info", ".alert-light", ".alert-dark".
+
+```
+<div class="alert alert-danger" role="alert">
+  This is an Alert!
+</div>
+```
 
 ---
 
