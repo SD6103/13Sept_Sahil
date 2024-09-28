@@ -56,6 +56,37 @@
 => A component is essentially a piece of the User Interface (UI) that can be reuse with other components to build complex UIs.
 => Basically, Component are HTML Elements, which can be used in the JSX file to create UI design which called React Components.
 => React Components have their own sturcture, style and behavior.
+=> Components are render inside of fragments.
+=> There are 2 types of components in React JS :
+
+• Class based components :
+► syntax :
+
+```
+class <className> extends Components {
+    render() {
+        return (
+            <>
+            statements;
+            </>
+        )
+    }
+}
+```
+
+• Functional Components :
+► Syntax :
+
+```
+function <componentsName> () {
+    return (
+        <>
+        Statemtens;
+        </>
+    )
+}
+
+```
 
 ---
 
@@ -71,19 +102,22 @@
 => Ex :
 
 ```
+
 function Header() {
-    return (
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    );
+return (
+
+<header>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+);
 }
+
 ```
 
 • Content Component :
@@ -93,14 +127,17 @@ function Header() {
 Ex :
 
 ```
+
 function Content() {
-    return (
-        <main>
-            <h1>Welcome to Our Website</h1>
-            <p>This is the main content area where information about the site is displayed.</p>
-        </main>
-    );
+return (
+
+<main>
+<h1>Welcome to Our Website</h1>
+<p>This is the main content area where information about the site is displayed.</p>
+</main>
+);
 }
+
 ```
 
 ---
@@ -150,3 +187,11 @@ function Content() {
 → There is listed the version of React JS.
 
 ---
+
+```
+
+```
+
+```
+
+```
