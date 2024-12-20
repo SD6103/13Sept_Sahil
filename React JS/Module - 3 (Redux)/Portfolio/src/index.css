@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+@font-face {
+  font-family: "aquire";
+  src: url("src/assets/font/aquire-font/AquireBold-8Ma60.otf");
+}
+@font-face {
+  font-family: "airnt";
+  src: url("src/assets/font/airnt/Airnt.otf");
+}
+@font-face {
+  font-family: "brandon";
+  src: url("src/assets/font/brandon-grotesque-font-family-1716364929-0/HvDTrial_Brandon_Grotesque_light-BF64a625c93e709.otf");
+}
+@font-face {
+  font-family: "nusar";
+  src: url("src/assets/font/NUSAR/NUSAR.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: brandon;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+/* Light Theme */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+/* Optional: Smooth Transition for Theme Change */
+.userlayout {
+  transition: all 0.2s;
+}
+
+::selection {
+  color: black;
+  background-color: white;
+}
+
+.about span,
+.projects .text-content h1,
+.skill .text-content h1 {
+  font-family: nusar;
+}
+
+.project:hover .project-content {
+  opacity: 1;
+  transform: trangrayY(0%);
+}
+
+.project:hover .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 23, 23, 0.395),
+    rgba(0, 0, 0, 0.81)
+  );
+}
+
+/* .admin-login {
+  font-family: brandon;
+} */
+
+/* .hero {
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .content {
+  position: relative;
+  z-index: 1;
+} */
+
+/* #tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+} */
