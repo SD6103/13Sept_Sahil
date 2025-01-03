@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="main bg-zinc-900 min-h-screen flex flex-col gap-5 justify-center items-center"
+    >
+      <h1 class="text-4xl text-gray-200">Weather App</h1>
+      <form action="/get-weather" method="post" class="flex gap-2">
+        <input
+          type="text"
+          placeholder="Enter City"
+          name="city"
+          class="py-3 px-4 bg-zinc-700 text-gray-300 outline-none rounded-lg"
+        />
+        <button type="submit" class="bg-sky-500 text-center rounded-lg px-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            color="#d1d5db"
+            fill="none"
+          >
+            <path
+              d="M17.5 17.5L22 22"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </form>
+
+      
+
+        {{#if weather}}
+        <div
+        class="weather-detail bg-[#71717a55] h-64 w-[310px] rounded-lg p-3 flex flex-col justify-start items-center gap-2"
+      >
+          <h1 class="text-[1.5rem] text-gray-300">{{weather.name}}</h1>
+          <div class="temp flex">
+            <span class="text-[3.5rem] text-gray-200">{{weather.main.temp}}
+              <span class="text-[1.5rem] text-gray-200">°C</span>
+            </span>
+          </div>
+          <span
+            class="text-gray-300 text-[1.1rem]"
+          >{{weather.weather.0.description}}</span>
+          <div class="more-details text-gray-300 flex gap-10 mt-2">
+            <div class="left flex flex-col justify-center items-center">
+              <span>Humidity</span>
+              <span>{{weather.main.humidity}}%</span>
+            </div>
+            <div class="right flex flex-col justify-center items-center">
+              <span>Wind speed</span>
+              <span>{{weather.wind.speed}} m/s</span>
+            </div>
+          </div>
+        {{else}}
+            <span class="text-center text-zinc-400 text-[1.5rem]" >{{error}}</span>
+      </div>
+        {{/if}}
+    </div>
+  </body>
+</html>
