@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body>
+    <div class="main w-ful h-screen bg-zinc-800 p-10 flex flex-col gap-5">
+        <h1 class="text-zinc-300 text-3xl">Products</h1>
+        <div class="products flex gap-5">
+            <% if(products.length> 0) { %>
+                <% products.forEach((product)=>{ %>
+                    <div class="card flex flex-col gap-3 w-72 p-5 bg-zinc-600 rounded-md border-2 border-zinc-400">
+                        <div class="card-content ">
+                            <h1 class="text-zinc-300 text-lg mb-3">
+                                <%= product.title %>
+                            </h1>
+                            <p class="text-zinc-400 text-sm mb-2">
+                                <%= product.desc %>
+                            </p>
+                            <span class="text-lg font-semibold text-zinc-300">
+                                $<%= product.price %>
+                            </span>
+                        </div>
+                        <div class="btns flex gap-5">
+                            <a href="/edit/<%= product._id %>"
+                                class="w-fit px-5 py-1 bg-emerald-600 text-white rounded-md">Edit</a>
+                            <a href="/delete/<%= product._id %>"
+                                class="w-fit px-4 py-1 bg-red-500 text-white rounded-md">Delete</a>
+                        </div>
+                    </div>
+                    <% }) %>
+                        <% } else { %>
+                            <h1 class="text-2xl text-zinc-400">No Products Found!</h1>
+                            <% } %>
+
+        </div>
+    </div>
+</body>
+
+</html>
